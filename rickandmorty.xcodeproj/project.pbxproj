@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F652746288812DB00051B5B /* CharacterCardView.swift */; };
 		9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3132F2873089B009BE8E9 /* rickandmortyApp.swift */; };
 		9FF313322873089B009BE8E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF313312873089B009BE8E9 /* ContentView.swift */; };
 		9FF313342873089C009BE8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF313332873089C009BE8E9 /* Assets.xcassets */; };
 		9FF313372873089C009BE8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF313362873089C009BE8E9 /* Preview Assets.xcassets */; };
+		9FF3133F287312BB009BE8E9 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF3133E287312BB009BE8E9 /* Apollo */; };
+		9FF31341287312BB009BE8E9 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF31340287312BB009BE8E9 /* ApolloAPI */; };
+		9FF31343287312BB009BE8E9 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 9FF31342287312BB009BE8E9 /* ApolloWebSocket */; };
+		9FFBE79328854C9900BD19A9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE79228854C9900BD19A9 /* Home.swift */; };
+		9FFBE7952885549C00BD19A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */; };
+		9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7962885555500BD19A9 /* CharactersView.swift */; };
+		9FFBE7992885575C00BD19A9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7982885575C00BD19A9 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F652746288812DB00051B5B /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
 		9FF3132C2873089B009BE8E9 /* rickandmorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rickandmorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3132F2873089B009BE8E9 /* rickandmortyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rickandmortyApp.swift; sourceTree = "<group>"; };
 		9FF313312873089B009BE8E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9FF313332873089C009BE8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF313362873089C009BE8E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FFBE79228854C9900BD19A9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9FFBE7962885555500BD19A9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		9FFBE7982885575C00BD19A9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +39,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF31341287312BB009BE8E9 /* ApolloAPI in Frameworks */,
+				9FF31343287312BB009BE8E9 /* ApolloWebSocket in Frameworks */,
+				9FF3133F287312BB009BE8E9 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F652745288812B600051B5B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9F652746288812DB00051B5B /* CharacterCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		9FF313232873089B009BE8E9 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +75,10 @@
 		9FF3132E2873089B009BE8E9 /* rickandmorty */ = {
 			isa = PBXGroup;
 			children = (
+				9F652745288812B600051B5B /* Components */,
+				9FFBE78F28854BCB00BD19A9 /* Model */,
+				9FFBE78E28854BC300BD19A9 /* ViewModel */,
+				9FFBE78D28854BB900BD19A9 /* View */,
 				9FF3132F2873089B009BE8E9 /* rickandmortyApp.swift */,
 				9FF313312873089B009BE8E9 /* ContentView.swift */,
 				9FF313332873089C009BE8E9 /* Assets.xcassets */,
@@ -65,6 +93,31 @@
 				9FF313362873089C009BE8E9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FFBE78D28854BB900BD19A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FFBE79228854C9900BD19A9 /* Home.swift */,
+				9FFBE7962885555500BD19A9 /* CharactersView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FFBE78E28854BC300BD19A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9FFBE78F28854BCB00BD19A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FFBE7982885575C00BD19A9 /* Character.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +136,11 @@
 			dependencies = (
 			);
 			name = rickandmorty;
+			packageProductDependencies = (
+				9FF3133E287312BB009BE8E9 /* Apollo */,
+				9FF31340287312BB009BE8E9 /* ApolloAPI */,
+				9FF31342287312BB009BE8E9 /* ApolloWebSocket */,
+			);
 			productName = rickandmorty;
 			productReference = 9FF3132C2873089B009BE8E9 /* rickandmorty.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 9FF313232873089B009BE8E9;
+			packageReferences = (
+				9FF3133D287312BB009BE8E9 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 9FF3132D2873089B009BE8E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF313322873089B009BE8E9 /* ContentView.swift in Sources */,
+				9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */,
+				9FFBE79328854C9900BD19A9 /* Home.swift in Sources */,
+				9FFBE7992885575C00BD19A9 /* Character.swift in Sources */,
 				9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */,
+				9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */,
+				9FFBE7952885549C00BD19A9 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +405,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FF3133D287312BB009BE8E9 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FF3133E287312BB009BE8E9 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF3133D287312BB009BE8E9 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		9FF31340287312BB009BE8E9 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF3133D287312BB009BE8E9 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		9FF31342287312BB009BE8E9 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FF3133D287312BB009BE8E9 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FF313242873089B009BE8E9 /* Project object */;
 }

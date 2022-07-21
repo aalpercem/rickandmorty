@@ -9,7 +9,17 @@ import SwiftUI
 
 struct CharacterCardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+      VStack(alignment: .leading, spacing: 15) {
+          Image(systemName: "globe.europe.africa.fill")
+        Text("Title").bold()
+          Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.")
+      }
+      .padding()
+      .background(.green)
+      .cornerRadius(10)
+      .padding()
+      Spacer(minLength: 0)
     }
 }
 

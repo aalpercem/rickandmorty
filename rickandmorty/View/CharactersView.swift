@@ -12,9 +12,20 @@ struct CharactersView: View {
   var body: some View {
 
 
-    ScrollView(.vertical, showsIndicators: false, content: {
-      
-    })
+    NavigationView {
+      ScrollView(.vertical, showsIndicators: false, content: {
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+        CharacterCardView()
+      })
+      .navigationTitle("Characters")
+    }
 
   }
 

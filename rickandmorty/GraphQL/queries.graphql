@@ -1,0 +1,14 @@
+query GetAllCharacters {
+  characters {
+    info {
+      count
+    }
+    results {
+      id
+      image
+      name
+      gender
+      status
+    }
+  }
+}

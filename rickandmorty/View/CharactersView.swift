@@ -11,7 +11,6 @@ struct CharactersView: View {
   @EnvironmentObject var homeData: HomeViewModel
   var body: some View {
 
-
     NavigationView {
       ScrollView(.vertical, showsIndicators: false, content: {
         CharacterCardView()
@@ -26,10 +25,7 @@ struct CharactersView: View {
       })
       .navigationTitle("Characters")
     }
-
   }
-
-
 }
 
 struct CharactersView_Previews: PreviewProvider {

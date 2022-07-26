@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct rickandmortyApp: App {
+
+  @StateObject var homeViewModel = HomeViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environmentObject(homeViewModel)
         }
     }
 }

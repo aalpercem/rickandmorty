@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F205524288EE52000D9291A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F205523288EE52000D9291A /* CharacterModel.swift */; };
 		9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F652746288812DB00051B5B /* CharacterCardView.swift */; };
 		9FC1A67C2889700C003CA582 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67B2889700C003CA582 /* Apollo */; };
 		9FC1A67E2889700C003CA582 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67D2889700C003CA582 /* ApolloAPI */; };
@@ -25,10 +26,10 @@
 		9FFBE79328854C9900BD19A9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE79228854C9900BD19A9 /* Home.swift */; };
 		9FFBE7952885549C00BD19A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */; };
 		9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7962885555500BD19A9 /* CharactersView.swift */; };
-		9FFBE7992885575C00BD19A9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7982885575C00BD19A9 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F205523288EE52000D9291A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		9F652746288812DB00051B5B /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
 		9FC1A6872889711C003CA582 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		9FC1A68928897169003CA582 /* queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queries.graphql; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		9FFBE79228854C9900BD19A9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9FFBE7962885555500BD19A9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
-		9FFBE7982885575C00BD19A9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 		9FFBE78F28854BCB00BD19A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9FFBE7982885575C00BD19A9 /* Character.swift */,
+				9F205523288EE52000D9291A /* CharacterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,10 +254,10 @@
 				9FF313322873089B009BE8E9 /* ContentView.swift in Sources */,
 				9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */,
 				9FFBE79328854C9900BD19A9 /* Home.swift in Sources */,
-				9FFBE7992885575C00BD19A9 /* Character.swift in Sources */,
 				9FC1A68F28897328003CA582 /* Apollo.swift in Sources */,
 				9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */,
 				9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */,
+				9F205524288EE52000D9291A /* CharacterModel.swift in Sources */,
 				9FC1A68D288972CC003CA582 /* API.swift in Sources */,
 				9FFBE7952885549C00BD19A9 /* HomeViewModel.swift in Sources */,
 			);

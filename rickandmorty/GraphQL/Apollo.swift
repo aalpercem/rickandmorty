@@ -13,6 +13,7 @@ class Network {
   static let shared = Network()
   private init (){ }
 
-  lazy var apollo = ApolloClient(url: URL(string: "https://rickandmortyapi.com/graphql")!)
-  
+  let url = "https://rickandmortyapi.com/graphql"
+
+  private(set) lazy var apollo = ApolloClient(url: URL(string: url)!)
 }

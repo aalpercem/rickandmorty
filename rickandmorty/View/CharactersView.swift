@@ -13,23 +13,22 @@ struct CharactersView: View {
 
     NavigationView {
       ScrollView(.vertical, showsIndicators: false, content: {
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-        CharacterCardView()
-      })
+        ForEach(homeData.characterResults){ characterData in
+          CharacterCardView(
+            name: characterData.name,
+            image: characterData.image,
+            gender: "dummy gender",
+            status: "dummy status")//.searchable(text: characterData.name)
+        }
       .navigationTitle("Characters")
+      })
     }
-  }
+}
 }
 
-struct CharactersView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
-}
+
+//struct CharactersView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    CharactersView()
+//  }
+//}

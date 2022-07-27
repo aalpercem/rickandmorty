@@ -7,34 +7,29 @@ import Foundation
 
 typealias CharacterData = GetAllCharactersQuery.Data.Character
 
-// MARK: - CharacterModel
 struct CharacterModel: Codable {
     var data: DataClass
 }
 
-// MARK: - DataClass
 struct DataClass: Codable {
     var characters: Characters
 }
 
-// MARK: - Characters
 struct Characters: Codable {
     var info: Info
     var results: [Result]
 }
 
-// MARK: - Info
 struct Info: Codable {
     var count: Int
 }
 
-// MARK: - Result
-struct Result: Codable {
+struct Result: Codable, Identifiable {
     var id: String
     var image: String
     var name: String
-    var gender: Gender
-    var status: Status
+    var gender: Gender?
+    var status: Status?
 }
 
 enum Gender: String, Codable {

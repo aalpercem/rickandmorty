@@ -14,6 +14,7 @@ struct Home: View {
     var body: some View {
       TabView {
 
+// TODO: Add Tags
         CharactersView().tabItem{
           Image(systemName: "person.3.fill")
           Text("Characters")

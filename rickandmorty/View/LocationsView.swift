@@ -13,13 +13,16 @@ struct LocationsView: View {
     var body: some View {
       NavigationView {
         ScrollView(.vertical, showsIndicators: false, content: {
-         LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+          LottieView(fileName: "bored-hand-loading")
+            .frame(width: 300, height: 300, alignment: .center)
+
+//         LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
 
         })
         .navigationTitle("Locations")

@@ -14,7 +14,9 @@
 		9F205524288EE52000D9291A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F205523288EE52000D9291A /* CharacterModel.swift */; };
 		9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F652746288812DB00051B5B /* CharacterCardView.swift */; };
 		9FB516B928AA7B7D00186E2F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB516B828AA7B7D00186E2F /* LottieView.swift */; };
-		9FB516BB28AA7CF300186E2F /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516BA28AA7CF200186E2F /* loading.json */; };
+		9FB516C428AA89EF00186E2F /* bored-hand-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C128AA89EF00186E2F /* bored-hand-loading.json */; };
+		9FB516C528AA89EF00186E2F /* bounching-ball-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */; };
+		9FB516C828AA8AB900186E2F /* circle-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C728AA8AB900186E2F /* circle-loading.json */; };
 		9FB6211628A688D2003E2137 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9FB6211528A688D2003E2137 /* Lottie */; };
 		9FC1A67C2889700C003CA582 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67B2889700C003CA582 /* Apollo */; };
 		9FC1A67E2889700C003CA582 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67D2889700C003CA582 /* ApolloAPI */; };
@@ -43,7 +45,9 @@
 		9F205523288EE52000D9291A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		9F652746288812DB00051B5B /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
 		9FB516B828AA7B7D00186E2F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		9FB516BA28AA7CF200186E2F /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		9FB516C128AA89EF00186E2F /* bored-hand-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bored-hand-loading.json"; sourceTree = "<group>"; };
+		9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bounching-ball-loading.json"; sourceTree = "<group>"; };
+		9FB516C728AA8AB900186E2F /* circle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "circle-loading.json"; sourceTree = "<group>"; };
 		9FC1A6872889711C003CA582 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		9FC1A68928897169003CA582 /* queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queries.graphql; sourceTree = "<group>"; };
 		9FC1A68C288972CC003CA582 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -89,7 +93,9 @@
 		9FB516BC28AA7F2600186E2F /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				9FB516BA28AA7CF200186E2F /* loading.json */,
+				9FB516C128AA89EF00186E2F /* bored-hand-loading.json */,
+				9FB516C728AA8AB900186E2F /* circle-loading.json */,
+				9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -247,10 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF313372873089C009BE8E9 /* Preview Assets.xcassets in Resources */,
+				9FB516C528AA89EF00186E2F /* bounching-ball-loading.json in Resources */,
 				9FC1A6882889711C003CA582 /* schema.json in Resources */,
 				9FC1A68A28897169003CA582 /* queries.graphql in Resources */,
+				9FB516C428AA89EF00186E2F /* bored-hand-loading.json in Resources */,
+				9FB516C828AA8AB900186E2F /* circle-loading.json in Resources */,
 				9FF313342873089C009BE8E9 /* Assets.xcassets in Resources */,
-				9FB516BB28AA7CF300186E2F /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

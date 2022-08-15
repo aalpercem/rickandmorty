@@ -27,9 +27,8 @@ struct CharacterCardView: View {
       AsyncImage(url: URL(string: image)){ image in
         image.resizable()
       } placeholder: {
-        LottieView(fileName: "loading")
-          .frame(width: 200, height: 200, alignment: .center)
-          .background(Color.red)
+        LottieView(fileName: "circle-loading")
+          .frame(width: 300, height: 300, alignment: .center)
       }
       .frame(width: deviceWidth * 0.8)
       .frame(maxHeight: .infinity)

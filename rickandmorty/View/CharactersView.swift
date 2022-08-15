@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharactersView: View {
-  @EnvironmentObject var homeData: HomeViewModel
+  @EnvironmentObject var homeData: HomeVM
   var body: some View {
 
     NavigationView {
@@ -17,8 +17,10 @@ struct CharactersView: View {
           CharacterCardView(
             name: characterData.name,
             image: characterData.image,
-            gender: "dummy gender",
-            status: "dummy status")//.searchable(text: characterData.name)
+            gender: characterData.gender,
+            status: characterData.status,
+            origin: characterData.origin)
+//          .searchable(text: characterData.name))
         }
       .navigationTitle("Characters")
       })
@@ -29,6 +31,6 @@ struct CharactersView: View {
 
 //struct CharactersView_Previews: PreviewProvider {
 //  static var previews: some View {
-//    CharactersView()
+//    CharacterCardView(name: "Rick", image: "Sanchez", gender: "Male", status: "Alive", origin: "Earth")
 //  }
 //}

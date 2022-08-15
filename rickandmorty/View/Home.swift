@@ -9,26 +9,28 @@ import SwiftUI
 
 struct Home: View {
 
-  @StateObject var HomeData = HomeViewModel()
+  @StateObject var HomeData = HomeVM()
   
     var body: some View {
       TabView {
-
-// TODO: Add Tags
         CharactersView().tabItem{
           Image(systemName: "person.3.fill")
           Text("Characters")
-        }.environmentObject(HomeData)
+        }
+        .environmentObject(HomeData)
+        .tag("CharactersTab")
 
-        Text("Locations").tabItem{
+        LocationsView().tabItem{
           Image(systemName: "map.fill")
           Text("Locations")
-        }.tag(1)
+        }
+        .tag("LocationsTab")
 
         Text("Episodes").tabItem{
           Image(systemName: "book.fill")
           Text("Episodes")
         }
+        .tag("EpisodesTab")
       }
     }
 }

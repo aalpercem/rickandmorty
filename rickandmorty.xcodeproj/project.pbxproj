@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0246A02896C3DF001FBC30 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F02469F2896C3DF001FBC30 /* LocationModel.swift */; };
+		9F0246A22896C549001FBC30 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0246A12896C549001FBC30 /* LocationsView.swift */; };
+		9F0246A42896C66A001FBC30 /* LocationsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0246A32896C66A001FBC30 /* LocationsVM.swift */; };
+		9F0246A62896C72E001FBC30 /* LocationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0246A52896C72E001FBC30 /* LocationCardView.swift */; };
 		9F205524288EE52000D9291A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F205523288EE52000D9291A /* CharacterModel.swift */; };
 		9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F652746288812DB00051B5B /* CharacterCardView.swift */; };
+		9FB516B928AA7B7D00186E2F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB516B828AA7B7D00186E2F /* LottieView.swift */; };
+		9FB516BB28AA7CF300186E2F /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516BA28AA7CF200186E2F /* loading.json */; };
+		9FB6211628A688D2003E2137 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9FB6211528A688D2003E2137 /* Lottie */; };
 		9FC1A67C2889700C003CA582 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67B2889700C003CA582 /* Apollo */; };
 		9FC1A67E2889700C003CA582 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67D2889700C003CA582 /* ApolloAPI */; };
 		9FC1A6802889700C003CA582 /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC1A67F2889700C003CA582 /* ApolloCodegenLib */; };
@@ -24,13 +31,19 @@
 		9FF313342873089C009BE8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF313332873089C009BE8E9 /* Assets.xcassets */; };
 		9FF313372873089C009BE8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF313362873089C009BE8E9 /* Preview Assets.xcassets */; };
 		9FFBE79328854C9900BD19A9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE79228854C9900BD19A9 /* Home.swift */; };
-		9FFBE7952885549C00BD19A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */; };
+		9FFBE7952885549C00BD19A9 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7942885549C00BD19A9 /* HomeVM.swift */; };
 		9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFBE7962885555500BD19A9 /* CharactersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F02469F2896C3DF001FBC30 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		9F0246A12896C549001FBC30 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		9F0246A32896C66A001FBC30 /* LocationsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsVM.swift; sourceTree = "<group>"; };
+		9F0246A52896C72E001FBC30 /* LocationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCardView.swift; sourceTree = "<group>"; };
 		9F205523288EE52000D9291A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		9F652746288812DB00051B5B /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
+		9FB516B828AA7B7D00186E2F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		9FB516BA28AA7CF200186E2F /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		9FC1A6872889711C003CA582 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		9FC1A68928897169003CA582 /* queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queries.graphql; sourceTree = "<group>"; };
 		9FC1A68C288972CC003CA582 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -41,7 +54,7 @@
 		9FF313332873089C009BE8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF313362873089C009BE8E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FFBE79228854C9900BD19A9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9FFBE7942885549C00BD19A9 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		9FFBE7962885555500BD19A9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FC1A67E2889700C003CA582 /* ApolloAPI in Frameworks */,
+				9FB6211628A688D2003E2137 /* Lottie in Frameworks */,
 				9FC1A6862889700C003CA582 /* ApolloWebSocket in Frameworks */,
 				9FC1A6842889700C003CA582 /* ApolloUtils in Frameworks */,
 				9FC1A6822889700C003CA582 /* ApolloSQLite in Frameworks */,
@@ -66,8 +80,18 @@
 			isa = PBXGroup;
 			children = (
 				9F652746288812DB00051B5B /* CharacterCardView.swift */,
+				9FB516B828AA7B7D00186E2F /* LottieView.swift */,
+				9F0246A52896C72E001FBC30 /* LocationCardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9FB516BC28AA7F2600186E2F /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				9FB516BA28AA7CF200186E2F /* loading.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		9FC1A67928896F6D003CA582 /* GraphQL */ = {
@@ -99,6 +123,7 @@
 		9FF3132E2873089B009BE8E9 /* rickandmorty */ = {
 			isa = PBXGroup;
 			children = (
+				9FB516BC28AA7F2600186E2F /* Lottie */,
 				9FC1A6872889711C003CA582 /* schema.json */,
 				9FC1A67928896F6D003CA582 /* GraphQL */,
 				9F652745288812B600051B5B /* Components */,
@@ -126,6 +151,7 @@
 			children = (
 				9FFBE79228854C9900BD19A9 /* Home.swift */,
 				9FFBE7962885555500BD19A9 /* CharactersView.swift */,
+				9F0246A12896C549001FBC30 /* LocationsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,7 +159,8 @@
 		9FFBE78E28854BC300BD19A9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9FFBE7942885549C00BD19A9 /* HomeViewModel.swift */,
+				9FFBE7942885549C00BD19A9 /* HomeVM.swift */,
+				9F0246A32896C66A001FBC30 /* LocationsVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9F205523288EE52000D9291A /* CharacterModel.swift */,
+				9F02469F2896C3DF001FBC30 /* LocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +198,7 @@
 				9FC1A6812889700C003CA582 /* ApolloSQLite */,
 				9FC1A6832889700C003CA582 /* ApolloUtils */,
 				9FC1A6852889700C003CA582 /* ApolloWebSocket */,
+				9FB6211528A688D2003E2137 /* Lottie */,
 			);
 			productName = rickandmorty;
 			productReference = 9FF3132C2873089B009BE8E9 /* rickandmorty.app */;
@@ -201,6 +230,7 @@
 			mainGroup = 9FF313232873089B009BE8E9;
 			packageReferences = (
 				9FC1A67A2889700C003CA582 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				9FB6211428A688D1003E2137 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 9FF3132D2873089B009BE8E9 /* Products */;
 			projectDirPath = "";
@@ -220,6 +250,7 @@
 				9FC1A6882889711C003CA582 /* schema.json in Resources */,
 				9FC1A68A28897169003CA582 /* queries.graphql in Resources */,
 				9FF313342873089C009BE8E9 /* Assets.xcassets in Resources */,
+				9FB516BB28AA7CF300186E2F /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +285,17 @@
 				9FF313322873089B009BE8E9 /* ContentView.swift in Sources */,
 				9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */,
 				9FFBE79328854C9900BD19A9 /* Home.swift in Sources */,
+				9F0246A62896C72E001FBC30 /* LocationCardView.swift in Sources */,
 				9FC1A68F28897328003CA582 /* Apollo.swift in Sources */,
 				9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */,
 				9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */,
 				9F205524288EE52000D9291A /* CharacterModel.swift in Sources */,
+				9F0246A42896C66A001FBC30 /* LocationsVM.swift in Sources */,
+				9F0246A22896C549001FBC30 /* LocationsView.swift in Sources */,
 				9FC1A68D288972CC003CA582 /* API.swift in Sources */,
-				9FFBE7952885549C00BD19A9 /* HomeViewModel.swift in Sources */,
+				9FB516B928AA7B7D00186E2F /* LottieView.swift in Sources */,
+				9F0246A02896C3DF001FBC30 /* LocationModel.swift in Sources */,
+				9FFBE7952885549C00BD19A9 /* HomeVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"rickandmorty/Preview Content\"";
 				DEVELOPMENT_TEAM = 3486U5967B;
 				ENABLE_PREVIEWS = YES;
@@ -416,6 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"rickandmorty/Preview Content\"";
 				DEVELOPMENT_TEAM = 3486U5967B;
 				ENABLE_PREVIEWS = YES;
@@ -462,6 +500,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9FB6211428A688D1003E2137 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		9FC1A67A2889700C003CA582 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios";
@@ -473,6 +519,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9FB6211528A688D2003E2137 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FB6211428A688D1003E2137 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		9FC1A67B2889700C003CA582 /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9FC1A67A2889700C003CA582 /* XCRemoteSwiftPackageReference "apollo-ios" */;

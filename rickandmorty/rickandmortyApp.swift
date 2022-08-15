@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct rickandmortyApp: App {
 
-  @StateObject var homeViewModel = HomeViewModel()
+  @StateObject var homeViewModel = HomeVM()
 
     var body: some Scene {
         WindowGroup {

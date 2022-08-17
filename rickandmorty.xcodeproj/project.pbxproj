@@ -28,6 +28,8 @@
 		9FC1A68A28897169003CA582 /* queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9FC1A68928897169003CA582 /* queries.graphql */; };
 		9FC1A68D288972CC003CA582 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1A68C288972CC003CA582 /* API.swift */; };
 		9FC1A68F28897328003CA582 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1A68E28897328003CA582 /* Apollo.swift */; };
+		9FD0AE5728ACDE3000F3958C /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0AE5628ACDE3000F3958C /* CharacterDetailView.swift */; };
+		9FD0AE5928AD39D700F3958C /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD0AE5828AD39D700F3958C /* DetailHeaderView.swift */; };
 		9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3132F2873089B009BE8E9 /* rickandmortyApp.swift */; };
 		9FF313322873089B009BE8E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF313312873089B009BE8E9 /* ContentView.swift */; };
 		9FF313342873089C009BE8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF313332873089C009BE8E9 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		9FC1A68928897169003CA582 /* queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = queries.graphql; sourceTree = "<group>"; };
 		9FC1A68C288972CC003CA582 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9FC1A68E28897328003CA582 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		9FD0AE5628ACDE3000F3958C /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		9FD0AE5828AD39D700F3958C /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		9FF3132C2873089B009BE8E9 /* rickandmorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rickandmorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3132F2873089B009BE8E9 /* rickandmortyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rickandmortyApp.swift; sourceTree = "<group>"; };
 		9FF313312873089B009BE8E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 				9F652746288812DB00051B5B /* CharacterCardView.swift */,
 				9FB516B828AA7B7D00186E2F /* LottieView.swift */,
 				9F0246A52896C72E001FBC30 /* LocationCardView.swift */,
+				9FD0AE5828AD39D700F3958C /* DetailHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				9FFBE79228854C9900BD19A9 /* Home.swift */,
 				9FFBE7962885555500BD19A9 /* CharactersView.swift */,
 				9F0246A12896C549001FBC30 /* LocationsView.swift */,
+				9FD0AE5628ACDE3000F3958C /* CharacterDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD0AE5728ACDE3000F3958C /* CharacterDetailView.swift in Sources */,
 				9FF313322873089B009BE8E9 /* ContentView.swift in Sources */,
 				9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */,
 				9FFBE79328854C9900BD19A9 /* Home.swift in Sources */,
@@ -297,6 +304,7 @@
 				9FC1A68F28897328003CA582 /* Apollo.swift in Sources */,
 				9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */,
 				9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */,
+				9FD0AE5928AD39D700F3958C /* DetailHeaderView.swift in Sources */,
 				9F205524288EE52000D9291A /* CharacterModel.swift in Sources */,
 				9F0246A42896C66A001FBC30 /* LocationsVM.swift in Sources */,
 				9F0246A22896C549001FBC30 /* LocationsView.swift in Sources */,

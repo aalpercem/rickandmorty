@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CharacterCardView: View {
 
+  @State var isPresented = false
+
   var deviceHeight = UIScreen.main.bounds.height
   var deviceWidth = UIScreen.main.bounds.width
 
@@ -22,7 +24,6 @@ struct CharacterCardView: View {
   var origin: CharacterOrigin
 
   var body: some View {
-
     VStack(alignment: .leading, spacing: 10) {
       AsyncImage(url: URL(string: image)){ image in
         image.resizable()
@@ -37,9 +38,6 @@ struct CharacterCardView: View {
       VStack(alignment: .leading, spacing: 5){
         Text("\(name)").font(.largeTitle)
         Text("\(gender.rawValue)").font(.title3)
-        //TODO: Origin & Dimension detail sayfada olsun.
-        //        Text("Origin: \(origin.name.rawValue)")
-        //        Text("Dimension: \(origin.dimension?.rawValue ?? "")")
         HStack() {
           Text("\(status.rawValue)").font(.title3)
           Circle()
@@ -47,9 +45,12 @@ struct CharacterCardView: View {
             .frame(width: 10, height: 10, alignment: .leading)
           Spacer()
           Image(systemName: "chevron.right")
-          //TODO: Fix Alignment
         }
       }.padding()
+
+    }
+    .onTapGesture {
+      isPresented.toggle()
     }
     .frame(width: deviceWidth * 0.8, alignment: .center)
     .frame(width: deviceWidth * 0.8)
@@ -58,6 +59,8 @@ struct CharacterCardView: View {
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: shadowHorizontalOffset, y: shadowVerticalOffset)
     .padding(10)
+
+    NavigationLink("", destination: CharacterDetailView(image: image, name: name, gender: gender.rawValue, status: status.rawValue, originName: origin.name.rawValue, originDimension: origin.dimension?.rawValue ?? ""), isActive: $isPresented)
   }
 }
 

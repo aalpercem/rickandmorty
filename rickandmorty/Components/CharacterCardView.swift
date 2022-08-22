@@ -43,10 +43,7 @@ struct CharacterCardView: View {
         Text("\(gender.rawValue)").font(.title3)
         HStack() {
           Text("\(status.rawValue)").font(.title3)
-          
-          Circle()
-            .fill(status.rawValue == "Alive" ? .green : .red)
-            .frame(width: 10, height: 10, alignment: .leading)
+          StatusCircle(status: status.rawValue)
           Spacer()
           Image(systemName: "chevron.right")
         }
@@ -59,14 +56,17 @@ struct CharacterCardView: View {
     .frame(width: deviceWidth * 0.8, alignment: .center)
     .frame(width: deviceWidth * 0.8)
     .frame(maxHeight: .infinity)
-    .background(.mint)
+    .background(Color("primaryColor"))
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: shadowHorizontalOffset, y: shadowVerticalOffset)
     .padding(10)
 
     NavigationLink("", destination: CharacterDetailView(image: image, name: name, gender: gender.rawValue, status: status.rawValue, originName: origin.name.rawValue, originDimension: origin.dimension?.rawValue ?? ""), isActive: $isPresented)
   }
+
 }
+
+
 
 //struct CharacterCardView_Previews: PreviewProvider {
 //  static var previews: some View {

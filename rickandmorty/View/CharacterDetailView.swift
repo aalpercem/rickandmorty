@@ -28,9 +28,7 @@ struct CharacterDetailView: View {
           Section("STATUS"){
             HStack{
               Text(status)
-              Circle()
-                .fill(status == "Alive" ? .green : .red)
-                .frame(width: 10, height: 10, alignment: .leading)
+              StatusCircle(status: status)
             }
 
           }
@@ -43,7 +41,7 @@ struct CharacterDetailView: View {
 
         }
     }
-    .background(LinearGradient(gradient: Gradient(colors: [.mint, .white]), startPoint: .top, endPoint: .bottom))
+    .background(LinearGradient(gradient: Gradient(colors: [Color("primaryColor"), .white]), startPoint: .top, endPoint: .bottom))
   }
 }
 

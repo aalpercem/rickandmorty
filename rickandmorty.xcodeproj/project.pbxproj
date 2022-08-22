@@ -13,6 +13,7 @@
 		9F0246A62896C72E001FBC30 /* LocationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0246A52896C72E001FBC30 /* LocationCardView.swift */; };
 		9F205524288EE52000D9291A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F205523288EE52000D9291A /* CharacterModel.swift */; };
 		9F652747288812DC00051B5B /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F652746288812DB00051B5B /* CharacterCardView.swift */; };
+		9F94CECE28B37B59001A8873 /* StatusCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94CECD28B37B59001A8873 /* StatusCircle.swift */; };
 		9FB516B928AA7B7D00186E2F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB516B828AA7B7D00186E2F /* LottieView.swift */; };
 		9FB516C428AA89EF00186E2F /* bored-hand-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C128AA89EF00186E2F /* bored-hand-loading.json */; };
 		9FB516C528AA89EF00186E2F /* bounching-ball-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */; };
@@ -46,6 +47,7 @@
 		9F0246A52896C72E001FBC30 /* LocationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCardView.swift; sourceTree = "<group>"; };
 		9F205523288EE52000D9291A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		9F652746288812DB00051B5B /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
+		9F94CECD28B37B59001A8873 /* StatusCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCircle.swift; sourceTree = "<group>"; };
 		9FB516B828AA7B7D00186E2F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		9FB516C128AA89EF00186E2F /* bored-hand-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bored-hand-loading.json"; sourceTree = "<group>"; };
 		9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bounching-ball-loading.json"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				9FB516B828AA7B7D00186E2F /* LottieView.swift */,
 				9F0246A52896C72E001FBC30 /* LocationCardView.swift */,
 				9FD0AE5828AD39D700F3958C /* DetailHeaderView.swift */,
+				9F94CECD28B37B59001A8873 /* StatusCircle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				9FF313322873089B009BE8E9 /* ContentView.swift in Sources */,
 				9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */,
 				9FFBE79328854C9900BD19A9 /* Home.swift in Sources */,
+				9F94CECE28B37B59001A8873 /* StatusCircle.swift in Sources */,
 				9F0246A62896C72E001FBC30 /* LocationCardView.swift in Sources */,
 				9FC1A68F28897328003CA582 /* Apollo.swift in Sources */,
 				9FF313302873089B009BE8E9 /* rickandmortyApp.swift in Sources */,

@@ -21,8 +21,6 @@ struct CharacterDetailView: View {
   var body: some View {
     VStack{
       DetailHeaderView(image: image, name: name)
-
-//      NavigationView{
         Form {
           Section("GENDER"){
             Text(gender)
@@ -31,7 +29,7 @@ struct CharacterDetailView: View {
             HStack{
               Text(status)
               Circle()
-                .fill(Color.green)
+                .fill(status == "Alive" ? .green : .red)
                 .frame(width: 10, height: 10, alignment: .leading)
             }
 
@@ -44,8 +42,6 @@ struct CharacterDetailView: View {
           }
 
         }
-//      }
-
     }
     .background(LinearGradient(gradient: Gradient(colors: [.mint, .white]), startPoint: .top, endPoint: .bottom))
   }

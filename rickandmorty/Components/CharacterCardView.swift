@@ -23,7 +23,10 @@ struct CharacterCardView: View {
   var status: CharacterStatus
   var origin: CharacterOrigin
 
+  var circleColor: Color = .white
+
   var body: some View {
+
     VStack(alignment: .leading, spacing: 10) {
       AsyncImage(url: URL(string: image)){ image in
         image.resizable()
@@ -40,8 +43,9 @@ struct CharacterCardView: View {
         Text("\(gender.rawValue)").font(.title3)
         HStack() {
           Text("\(status.rawValue)").font(.title3)
+          
           Circle()
-            .fill(Color.green)
+            .fill(status.rawValue == "Alive" ? .green : .red)
             .frame(width: 10, height: 10, alignment: .leading)
           Spacer()
           Image(systemName: "chevron.right")

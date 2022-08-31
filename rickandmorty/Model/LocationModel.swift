@@ -1,16 +1,16 @@
 import Foundation
 
 struct LocationModel: Codable {
-    var data: APILocationsData
+  var data: APILocationsData
 }
 
 struct APILocationsData: Codable {
-    var locations: Locations
+  var locations: Locations
 }
 
 struct Locations: Codable {
-    var info: LocationsInfo
-    var results: [LocationsResult]
+  var info: LocationsInfo
+  var results: [LocationsResult]
 }
 
 struct LocationsInfo: Codable {
@@ -19,20 +19,24 @@ struct LocationsInfo: Codable {
 }
 
 struct LocationsResult: Codable, Identifiable {
-    var id, name, dimension: String
-    var residents: [LocationsResident]
+  var id: String
+  var name: String
+  var dimension: String
+  var residents: [LocationsResident]
 }
 
-struct LocationsResident: Codable {
-    var id, name: String
-    var image: String
-    var status: LocationsStatus
+struct LocationsResident: Codable, Identifiable {
+  var privateId = UUID()
+  var id: String
+  var name: String
+  var image: String
+  var status: LocationsStatus
 }
 
 enum LocationsStatus: String, Codable {
-    case alive = "Alive"
-    case dead = "Dead"
-    case unknown = "unknown"
+  case alive = "Alive"
+  case dead = "Dead"
+  case unknown = "unknown"
 }
 
 //

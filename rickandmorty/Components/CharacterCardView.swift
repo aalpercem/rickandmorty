@@ -11,8 +11,8 @@ struct CharacterCardView: View {
 
   @State var isPresented = false
 
-  var deviceHeight = UIScreen.main.bounds.height
-  var deviceWidth = UIScreen.main.bounds.width
+  let deviceHeight = UIScreen.main.bounds.height
+  let deviceWidth = UIScreen.main.bounds.width
 
   var shadowHorizontalOffset = 3.0
   var shadowVerticalOffset = 8.0
@@ -54,7 +54,7 @@ struct CharacterCardView: View {
       isPresented.toggle()
     }
     .frame(width: deviceWidth * 0.8, alignment: .center)
-    .frame(width: deviceWidth * 0.8)
+//    .frame(width: deviceWidth * 0.8) // ??? neden burda da var
     .frame(maxHeight: .infinity)
     .background(Color("primaryColor"))
     .cornerRadius(15)

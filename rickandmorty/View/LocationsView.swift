@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct LocationsView: View {
-  @EnvironmentObject var LocationData: LocationsVM
+
+  @ObservedObject var vm: LocationsVM
 
     var body: some View {
       NavigationView {
         ScrollView(.vertical, showsIndicators: false, content: {
-          LottieView(fileName: "bored-hand-loading")
-            .frame(width: 300, height: 300, alignment: .center)
+//          LottieView(fileName: "bored-hand-loading")
+//            .frame(width: 300, height: 300, alignment: .center)
+          VStack{
+            ForEach(vm.locationResults){ locationData in
+              LocationCardView(name: locationData.name, dimension: locationData.dimension, residents: locationData.residents)
 
-//         LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
-//          LocationCardView(name: "Earth", dimension: "C-137", residents: ["ASD1","ASD2"])
+    //          .searchable(text: characterData.name))
+            }
+          }
 
         })
         .navigationTitle("Locations")
@@ -30,8 +30,8 @@ struct LocationsView: View {
     }
 }
 
-struct LocationsView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationsView()
-    }
-}
+//struct LocationsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocationsView()
+//    }
+//}

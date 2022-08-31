@@ -9,25 +9,31 @@ import SwiftUI
 
 struct LocationCardView: View {
 
-  static let screenWidth = UIScreen.main.bounds.size.width
-  static let screenHeight = UIScreen.main.bounds.size.height
+  let screenWidth = UIScreen.main.bounds.size.width
+  let screenHeight = UIScreen.main.bounds.size.height
 
   var name: String
   var dimension: String
-  var residents: [String]
+  var residents: [LocationsResident]
 
   var body: some View {
     VStack(alignment: .leading, spacing: 10){
-      Text("Name: Earth").bold()
+      Text("Name: \(name)").bold()
       HStack{
-        Text("Dimension: C-137")
+        Text("Dimension: \(dimension)")
         Spacer()
         Image(systemName: "chevron.right")
       }
 
+      ForEach(residents, id: \.privateId) { resident in
+        Text("Resident Name: \(resident.name)")
+      }
+
+
     }
-    .frame(width: LocationCardView.screenWidth*0.8 , height: 65, alignment: .leading)
-    .padding()
+    .frame(width: screenWidth * 0.8, alignment: .center)
+    .frame(maxHeight: .infinity)
+//    .padding()
     .background(.green)
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: 8, y: 8)

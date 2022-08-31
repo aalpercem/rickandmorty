@@ -20,7 +20,8 @@ struct Home: View {
         .environmentObject(HomeData)
         .tag("CharactersTab")
 
-        LocationsView().tabItem{
+
+        LocationsView(vm: LocationsVM()).tabItem{
           Image(systemName: "map.fill")
           Text("Locations")
         }
@@ -31,6 +32,7 @@ struct Home: View {
           Text("Episodes")
         }
         .tag("EpisodesTab")
+
       }
     }
 }

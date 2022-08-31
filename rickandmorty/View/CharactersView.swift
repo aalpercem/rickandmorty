@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CharactersView: View {
+
   @EnvironmentObject var homeData: HomeVM
+  @State private var searchText = ""
+
+
+
   var body: some View {
 
     NavigationView {
@@ -25,15 +30,26 @@ struct CharactersView: View {
   //          .searchable(text: characterData.name))
           }
         }
+      .searchable(text: $searchText, prompt: "Look for character")
+      .onChange(of: searchText) { searchText in
+        
+
+
+      }
       .navigationTitle("Characters")
       })
     }
-}
+
+    }
+
+
 }
 
 
+//
 //struct CharactersView_Previews: PreviewProvider {
 //  static var previews: some View {
-//    CharacterCardView(name: "Rick", image: "Sanchez", gender: "Male", status: "Alive", origin: "Earth")
+//    CharacterCardView(name: "Rick", image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", gender: CharacterGender.male, status: CharacterStatus.alive, origin: CharacterOrigin.init(id: "101", name: Name.earthC137)
+//    )
 //  }
 //}

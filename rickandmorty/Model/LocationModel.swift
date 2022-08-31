@@ -65,3 +65,4 @@ enum LocationsStatus: String, Codable {
 //        try container.encodeNil()
 //    }
 //}
+

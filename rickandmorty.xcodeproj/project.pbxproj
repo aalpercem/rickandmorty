@@ -17,6 +17,7 @@
 		9F82369228BFAF8800FBEF07 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82369128BFAF8800FBEF07 /* LocationDetailView.swift */; };
 		9F94CECE28B37B59001A8873 /* StatusCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94CECD28B37B59001A8873 /* StatusCircle.swift */; };
 		9FA8A25628C09CF200E21B39 /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8A25528C09CF200E21B39 /* EpisodeModel.swift */; };
+		9FA8A25828C09FEE00E21B39 /* EpisodeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA8A25728C09FEE00E21B39 /* EpisodeVM.swift */; };
 		9FB516B928AA7B7D00186E2F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB516B828AA7B7D00186E2F /* LottieView.swift */; };
 		9FB516C428AA89EF00186E2F /* bored-hand-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C128AA89EF00186E2F /* bored-hand-loading.json */; };
 		9FB516C528AA89EF00186E2F /* bounching-ball-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */; };
@@ -54,6 +55,7 @@
 		9F82369128BFAF8800FBEF07 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		9F94CECD28B37B59001A8873 /* StatusCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCircle.swift; sourceTree = "<group>"; };
 		9FA8A25528C09CF200E21B39 /* EpisodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModel.swift; sourceTree = "<group>"; };
+		9FA8A25728C09FEE00E21B39 /* EpisodeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeVM.swift; sourceTree = "<group>"; };
 		9FB516B828AA7B7D00186E2F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		9FB516C128AA89EF00186E2F /* bored-hand-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bored-hand-loading.json"; sourceTree = "<group>"; };
 		9FB516C228AA89EF00186E2F /* bounching-ball-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "bounching-ball-loading.json"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				9FFBE7942885549C00BD19A9 /* HomeVM.swift */,
 				9F0246A32896C66A001FBC30 /* LocationsVM.swift */,
+				9FA8A25728C09FEE00E21B39 /* EpisodeVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				9FD0AE5728ACDE3000F3958C /* CharacterDetailView.swift in Sources */,
 				9FF313322873089B009BE8E9 /* ContentView.swift in Sources */,
 				9FFBE7972885555500BD19A9 /* CharactersView.swift in Sources */,
+				9FA8A25828C09FEE00E21B39 /* EpisodeVM.swift in Sources */,
 				9FFBE79328854C9900BD19A9 /* Home.swift in Sources */,
 				9F94CECE28B37B59001A8873 /* StatusCircle.swift in Sources */,
 				9F0246A62896C72E001FBC30 /* LocationCardView.swift in Sources */,

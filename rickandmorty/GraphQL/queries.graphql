@@ -42,3 +42,37 @@ query GetAllLocations($page: Int) {
     }
   }
 }
+
+query GetAllEpisodes($page: Int) {
+  episodes(page: $page) {
+    info {
+      count
+      next
+      pages
+      prev
+    }
+    results {
+      id
+      name
+      episode
+      air_date
+      characters {
+        id
+        image
+        name
+        status
+        gender
+        location {
+          id
+          name
+          dimension
+        }
+        episode {
+          id
+          name
+          episode
+        }
+      }
+    }
+  }
+}

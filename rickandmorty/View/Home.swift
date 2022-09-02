@@ -27,7 +27,7 @@ struct Home: View {
         }
         .tag("LocationsTab")
 
-        Text("Episodes").tabItem{
+        EpisodesView(vm: EpisodeVM()).tabItem{
           Image(systemName: "book.fill")
           Text("Episodes")
         }

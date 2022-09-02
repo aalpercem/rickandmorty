@@ -5,19 +5,35 @@
 //  Created by Cem Ozturk on 1.09.2022.
 //
 
+import Apollo
+import Combine
 import SwiftUI
 
 class EpisodeVM: ObservableObject {
 
+//  @Published var apiEpisodeData: APIEpisodeData
   @Published var episodeResults: [EpisodeResult] = []
+  @Published var episodeInfo: [EpisodeInfo] = []
 
   let emptyResult: [EpisodeResult] = []
 
+  var episodesArrayFull = false
+  var currentPage = 0
+  let perPage = 20
+
+  private var cancellable: AnyCancellable?
+
+//  private var lastConnection : GetAllEpisodesQuery.Data.Episode?
+//  private var activeRequest: Cancellable?
+
   init(){
-    fetchEpisodes(page: 1)
+    self.fetchEpisodes(page: 0)
   }
 
   func fetchEpisodes(page: Int){
+
+    print("Getting Episodes: \(page)")
+
     Network.shared.apollo.fetch(query: GetAllEpisodesQuery(page: page)) { result in
       switch result {
       case let .success(response):
@@ -66,5 +82,11 @@ class EpisodeVM: ObservableObject {
 
 
     }
+
+
+
+
   }
+
 }
+

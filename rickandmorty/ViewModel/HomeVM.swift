@@ -20,6 +20,9 @@ class HomeVM: ObservableObject {
   }
 
   func fetchCharacters(page: Int){
+
+    print("Getting Characters: \(page)")
+
     Network.shared.apollo.fetch(query: GetAllCharactersQuery(page: page)) {result in
       switch result {
       case let .success(response):

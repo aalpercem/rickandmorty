@@ -18,6 +18,9 @@ class LocationsVM: ObservableObject {
   }
 
   func fetchLocations(page: Int){
+
+    print("Getting Locations: \(page)")
+
     Network.shared.apollo.fetch(query: GetAllLocationsQuery(page: page)) { result in
       switch result {
       case let .success(response):

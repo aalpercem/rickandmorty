@@ -21,19 +21,31 @@ struct EpisodeCard: View {
   var characters: [EpisodeCharacter]
   
   var body: some View {
-//    VStack {
+    VStack(alignment: .leading, spacing: 5) {
+
+      Image("RMEpisode")
+        .resizable()
+        .cornerRadius(15)
+        .aspectRatio(contentMode: .fill)
+        .clipped()
+        .scaledToFill()
+
+
       VStack (alignment: .leading, spacing: 5) {
         Text(name).font(.title)
         Spacer()
         Text(episodeCode)
-            HStack {
-              Text(airDate)
-              Spacer()
-              Image(systemName: "chevron.right")
-            }
-          }
-          .padding()
-//  }
+        HStack {
+          Text(airDate)
+          Spacer()
+          Image(systemName: "chevron.right")
+        }
+      }
+      .padding()
+    }
+    .onTapGesture {
+      isPresented.toggle()
+    }
     .frame(width: screenWidth * 0.9)
     .frame(maxHeight: .infinity)
     .background(Color("primaryColor"))
@@ -41,14 +53,18 @@ struct EpisodeCard: View {
     .shadow(color: .gray, radius: 5, x: 8, y: 8)
     .padding()
 
-//    NavigationLink(
-//      "",
-//      destination:
-//
-//
-//      isActive: $isPresented
-//    )
-}
+    NavigationLink(
+      "",
+      destination:
+        EpisodeDetailView(
+          id: id,
+          name: name,
+          episodeCode: episodeCode,
+          airDate: airDate,
+          characters: characters),
+      isActive: $isPresented
+    )
+  }
   //
   //struct EpisodeCard_Previews: PreviewProvider {
   //    static var previews: some View {

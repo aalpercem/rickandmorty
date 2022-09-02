@@ -44,6 +44,7 @@ struct EpisodeResult: Codable, Identifiable {
 
 // MARK: - Character
 struct EpisodeCharacter: Codable, Identifiable {
+  var privateId = UUID()
   var id: String
   var image: String
   var name: String

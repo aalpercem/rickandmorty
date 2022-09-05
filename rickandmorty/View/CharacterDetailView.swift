@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterDetailView: View {
+struct CharacterDetailView: View {  //Page
 
   var image: String
   var name: String

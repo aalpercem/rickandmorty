@@ -25,15 +25,14 @@ struct CharactersView: View {
               image: characterData.image,
               gender: characterData.gender,
               status: characterData.status,
-              origin: characterData.origin)
+              origin: characterData.origin
+            )
 
   //          .searchable(text: characterData.name))
           }
         }
       .searchable(text: $searchText, prompt: "Look for character")
       .onChange(of: searchText) { searchText in
-        
-
 
       }
       .navigationTitle("Characters")

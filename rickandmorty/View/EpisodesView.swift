@@ -10,44 +10,27 @@ import SwiftUI
 struct EpisodesView: View {
 
   @ObservedObject var vm: EpisodeVM
-//  @State private var currentPage = 0
 
   var body: some View {
     NavigationView {
       ScrollView(.vertical, showsIndicators: false, content: {
         LazyVStack{
-
-          ForEach(vm.episodeResults){ episodeData in
+          ForEach(vm.episodeResults.indices, id: \.self){ resultindex in
+            let episodeResults = vm.episodeResults[resultindex]
             EpisodeCard(
-              id: episodeData.id,
-              name: episodeData.name.rawValue,
-              episodeCode: episodeData.episode.rawValue,
-              airDate: episodeData.airDate,
-              characters: episodeData.characters
+              id: episodeResults.id,
+              name: episodeResults.name.rawValue,
+              episodeCode: episodeResults.episode.rawValue,
+              airDate: episodeResults.airDate,
+              characters: episodeResults.characters
             )
             .onAppear{
-              // if last item !!!!!!!!!!!
-              //
-
-              // vm.fetchEpisodes(page: )
+              vm.reloadMoreData(resultIndex: resultindex)
             }
-
           }
-
-          //          ForEach (vm.episodeResults) { index in
-          //            let episodeResults = vm.episodeResults[index]
-          //
-          //            EpisodeCard(
-          //              id: episodeResults[index].id,
-          //              name: episodeResults[index].name.rawValue,
-          //              episodeCode: episodeResults[index].episode.rawValue,
-          //              airDate: episodeResults[index].airDate,
-          //              characters: episodeResults[index].characters
-          //            )
-          //          }
         }
-
-      })
+      }
+      )
       .navigationTitle("Episodes")
     }
   }

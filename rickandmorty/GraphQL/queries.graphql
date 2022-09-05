@@ -61,17 +61,6 @@ query GetAllEpisodes($page: Int) {
         image
         name
         status
-        gender
-        location {
-          id
-          name
-          dimension
-        }
-        episode {
-          id
-          name
-          episode
-        }
       }
     }
   }

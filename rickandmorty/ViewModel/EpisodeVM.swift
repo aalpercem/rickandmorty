@@ -41,12 +41,11 @@ class EpisodeVM: ObservableObject {
         if let episodes =   response.data?.episodes{
           DispatchQueue.main.async {
             self.totalPage = episodes.info?.pages
-            let results: [EpisodeResult] = episodes.results?.map { item in
+            let _: [EpisodeResult] = episodes.results?.map { item in
               var episodeResult = EpisodeResult(id: "", name: .unknown, episode: .unknown , airDate: "", characters: [])
               if let item = item {
 
                 var resultCharacters: [EpisodeCharacter] = []
-                var characterEpisodes: [EpisodeElement] = []
 
                 for character in item.characters {
 
@@ -56,11 +55,7 @@ class EpisodeVM: ObservableObject {
                       id: character?.id ?? "",
                       image: character?.image ?? "",
                       name: character?.name ?? "",
-                      status: EpisodeCharacterStatus(rawValue: character?.status ?? "") ?? .unknown,
-                      gender: EpisodeCharacterGender(rawValue: character?.gender ?? "") ?? .unknown,
-                      location:
-                        EpisodeCharacterLocation(id: character?.location?.id ?? "", name: character?.location?.name ?? "", dimension: EpisodeCharacterLocationDimension(rawValue: character?.location?.dimension ?? "") ?? .unknown),
-                      episode: characterEpisodes
+                      status: EpisodeCharacterStatus(rawValue: character?.status ?? "") ?? .unknown
                     )
                   )
                 }

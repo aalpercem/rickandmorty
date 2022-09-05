@@ -49,16 +49,6 @@ struct EpisodeCharacter: Codable, Identifiable {
   var image: String
   var name: String
   var status: EpisodeCharacterStatus
-  var gender: EpisodeCharacterGender
-  var location: EpisodeCharacterLocation
-  var episode: [EpisodeElement]
-}
-
-// MARK: - EpisodeElement
-struct EpisodeElement: Codable, Identifiable {
-  var id: String
-  var name: EpisodeName
-  var episodeCode: EpisodeEnum
 }
 
 enum EpisodeEnum: String, Codable {
@@ -169,20 +159,6 @@ enum EpisodeName: String, Codable {
   case totalRickall = "Total Rickall"
   case vindicators3TheReturnOfWorldender = "Vindicators 3: The Return of Worldender"
   case unknown = "unknown"
-}
-
-enum EpisodeCharacterGender: String, Codable {
-  case female = "Female"
-  case genderless = "Genderless"
-  case male = "Male"
-  case unknown = "unknown"
-}
-
-// MARK: - Location
-struct EpisodeCharacterLocation: Codable, Identifiable {
-  var id: String?
-  var name: String
-  var dimension: EpisodeCharacterLocationDimension?
 }
 
 enum EpisodeCharacterLocationDimension: String, Codable {

@@ -19,54 +19,61 @@ struct LocationCardView: View {
   var residents: [LocationsResident]
 
   var body: some View {
-    VStack(alignment: .leading, spacing: 5){
+    VStack{
+      VStack(alignment: .leading, spacing: 5){
 
-      Image("RMEarth")
-        .resizable()
-        .cornerRadius(15)
-        .aspectRatio(contentMode: .fill)
-        .clipped()
-        .scaledToFill()
+        Image("RMEarth")
+          .resizable()
+          .cornerRadius(15)
+          .aspectRatio(contentMode: .fill)
+          .clipped()
+          .scaledToFill()
 
-      VStack(alignment: .leading){
-        Text(name).font(.title)
-        Spacer(minLength: 5)
+        VStack(alignment: .leading){
+          Text(name).font(.title)
+          Spacer(minLength: 5)
 
-        HStack{
-          Text(dimension).font(.title3)
-          Spacer()
-          Image(systemName: "chevron.right")
+          HStack{
+            Text(dimension).font(.title3)
+            Spacer()
+            Image(systemName: "chevron.right")
+          }
         }
+        .padding()
       }
+      .onTapGesture {
+        isPresented.toggle()
+      }
+      .frame(width: screenWidth * 0.8)
+      //    .frame(idealHeight: screenHeight * 0.1)
+      .frame(maxHeight: .infinity)
+      .background(Color("primaryColor"))
+      .cornerRadius(15)
+      .shadow(color: .gray, radius: 5, x: 8, y: 8)
       .padding()
-    }
-    .onTapGesture {
-      isPresented.toggle()
-    }
-    .frame(width: screenWidth * 0.8)
-    //    .frame(idealHeight: screenHeight * 0.1)
-    .frame(maxHeight: .infinity)
-    .background(Color("primaryColor"))
-    .cornerRadius(15)
-    .shadow(color: .gray, radius: 5, x: 8, y: 8)
-    .padding()
 
 
-    NavigationLink(
-      "",
-      destination:
-        LocationDetailView(
-          name: name,
-          dimension: dimension,
-          residents: residents),
-      isActive: $isPresented
+      NavigationLink(
+        "",
+        destination:
+          LocationDetailView(
+            name: name,
+            dimension: dimension,
+            residents: residents),
+        isActive: $isPresented
+      )
+    }
+  }
+}
+
+#if DEBUG
+struct LocationCardView_Previews: PreviewProvider {
+  static var previews: some View {
+    LocationCardView(
+      name: "Earth",
+      dimension: "C-137",
+      residents: []
     )
   }
 }
-//
-//struct LocationCardView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    LocationCardView(name: "Earth" ,dimension: "C-137" ,residents: [] )
-//  }
-//}
-
+#endif

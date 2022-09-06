@@ -39,9 +39,11 @@ struct CharacterCircle: View {
         }
     }
 }
-//
-//struct CharacterCircle_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterCircle()
-//    }
-//}
+
+#if DEBUG
+struct CharacterCircle_Previews: PreviewProvider {
+    static var previews: some View {
+        CharacterCircle(characters: [EpisodeCharacter]())
+    }
+}
+#endif

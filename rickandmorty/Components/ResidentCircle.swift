@@ -41,9 +41,11 @@ struct ResidentCircle: View {
     }
 }
 
-//struct ResidentCircle_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResidentCircle()
-//    }
-//}
+#if DEBUG
+struct ResidentCircle_Previews: PreviewProvider {
+    static var previews: some View {
+        ResidentCircle(residents: [LocationsResident]())
+    }
+}
+#endif
 

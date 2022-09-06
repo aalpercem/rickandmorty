@@ -22,9 +22,11 @@ struct StatusCircle: View {
     }
 }
 
+#if DEBUG
 struct StatusCircle_Previews: PreviewProvider {
     static var previews: some View {
       StatusCircle(status: "Alive")
     }
 }
+#endif
 

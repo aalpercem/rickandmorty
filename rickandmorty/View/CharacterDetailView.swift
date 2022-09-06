@@ -48,7 +48,14 @@ struct CharacterDetailView: View {  //Page
 #if DEBUG
 struct CharacterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-      CharacterDetailView(image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", name: "Rick Sanchez", gender: "Male", status: "Alive", originName: "Earth", originDimension: "Dimension C-137")
+      CharacterDetailView(
+        image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+        name: "Rick Sanchez",
+        gender: "Male",
+        status: "Alive",
+        originName: "Earth",
+        originDimension: "Dimension C-137"
+      )
     }
 }
 #endif

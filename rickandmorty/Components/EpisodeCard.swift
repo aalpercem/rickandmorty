@@ -30,7 +30,6 @@ struct EpisodeCard: View {
         .clipped()
         .scaledToFill()
 
-
       VStack (alignment: .leading, spacing: 5) {
         Text(name).font(.title)
         Spacer()
@@ -48,6 +47,7 @@ struct EpisodeCard: View {
     }
     .frame(width: screenWidth * 0.9)
     .frame(maxHeight: .infinity)
+//    .frame(idealHeight: screenHeight * 0.2)
     .background(Color("primaryColor"))
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: 8, y: 8)
@@ -65,11 +65,17 @@ struct EpisodeCard: View {
       isActive: $isPresented
     )
   }
-  //
-  //struct EpisodeCard_Previews: PreviewProvider {
-  //    static var previews: some View {
-  //        EpisodeCard()
-  //    }
-  //}
-
 }
+
+#if DEBUG
+struct EpisodeCard_Previews: PreviewProvider {
+    static var previews: some View {
+        EpisodeCard(
+          id: "123",
+          name: "Pilot",
+          episodeCode: "S01E01",
+          airDate: "October 1, 2022",
+          characters: [EpisodeCharacter]())
+    }
+}
+#endif

@@ -49,7 +49,12 @@ struct CharactersView: View {
 struct CharactersView_Previews: PreviewProvider {
   static var previews: some View {
     VStack{
-      CharacterCardView(name: "Rick", image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", gender: CharacterGender.male, status: CharacterStatus.alive, origin: CharacterOrigin.init(id: "101", name: Name.earthC137)
+      CharacterCardView(
+        name: "Rick",
+        image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+        gender: CharacterGender.male,
+        status: CharacterStatus.alive,
+        origin: CharacterOrigin.init(id: "101", name: Name.earthC137)
       )
   }
   }

@@ -67,10 +67,17 @@ struct CharacterCardView: View {
 }
 
 
+#if DEBUG
+struct CharacterCardView_Previews: PreviewProvider {
+  static var previews: some View {
+    CharacterCardView(
+      name: "Rick Sanchez",
+      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      gender: CharacterGender(rawValue: "Male") ?? .unknown,
+      status: CharacterStatus(rawValue: "Alive") ?? .unknown,
+      origin: CharacterOrigin(id: "123", name: Name(rawValue: "Earth") ?? .unknown)
+    )
+  }
+}
+#endif
 
-//struct CharacterCardView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    CharacterCardView(name: "Rick Sanchez", image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", gender: "Male", status: "Alive", origin: "Earth")
-//  }
-//}
-//

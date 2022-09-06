@@ -13,7 +13,7 @@ struct DetailHeaderView: View {
   var name: String
 
     var body: some View {
-
+      VStack{
         AsyncImage(url: URL(string: image)){ image in
           image.resizable()
         } placeholder: {
@@ -27,12 +27,17 @@ struct DetailHeaderView: View {
         .scaledToFill()
 
         Text(name).font(.largeTitle)
-
+      }
     }
 }
 
-//struct DetailHeaderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailHeaderView()
-//    }
-//}
+#if DEBUG
+struct DetailHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailHeaderView(
+          image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+          name: "Rick Sanchez"
+        )
+    }
+}
+#endif

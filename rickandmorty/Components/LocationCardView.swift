@@ -59,7 +59,8 @@ struct LocationCardView: View {
           LocationDetailView(
             name: name,
             dimension: dimension,
-            residents: residents),
+            residents: residents
+          ),
         isActive: $isPresented
       )
     }

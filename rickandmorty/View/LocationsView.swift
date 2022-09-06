@@ -18,8 +18,11 @@ struct LocationsView: View {
 //            .frame(width: 300, height: 300, alignment: .center)
           VStack{
             ForEach(vm.locationResults){ locationData in
-              LocationCardView(name: locationData.name, dimension: locationData.dimension, residents: locationData.residents)
-
+              LocationCardView(
+                name: locationData.name,
+                dimension: locationData.dimension,
+                residents: locationData.residents
+              )
     //          .searchable(text: characterData.name))
             }
           }

@@ -15,6 +15,7 @@ struct EpisodesView: View {
     NavigationView {
       ScrollView(.vertical, showsIndicators: false, content: {
         LazyVStack{
+
           ForEach(vm.episodeResults.indices, id: \.self){ resultindex in
             let episodeResults = vm.episodeResults[resultindex]
             EpisodeCard(
@@ -27,6 +28,9 @@ struct EpisodesView: View {
             .onAppear{
               vm.reloadMoreData(resultIndex: resultindex)
             }
+//            .refreshable {
+//              vm.reloadMoreData(resultIndex: resultindex)
+//            }
           }
         }
       }
@@ -36,10 +40,10 @@ struct EpisodesView: View {
   }
 }
 
-
-//
-//struct EpisodesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EpisodesView()
-//    }
-//}
+#if DEBUG
+struct EpisodesView_Previews: PreviewProvider {
+    static var previews: some View {
+      EpisodesView(vm: EpisodeVM())
+    }
+}
+#endif

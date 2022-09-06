@@ -13,8 +13,10 @@ class LocationsVM: ObservableObject {
 
   let emptyResult: [LocationsResult] = []
 
+  var currentPage = 0
+
   init(){
-    fetchLocations(page: 2)
+    fetchLocations(page: currentPage)
   }
 
   func fetchLocations(page: Int){

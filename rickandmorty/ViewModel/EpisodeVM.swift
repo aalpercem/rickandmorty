@@ -5,26 +5,16 @@
 //  Created by Cem Ozturk on 1.09.2022.
 //
 
-import Apollo
-import Combine
 import SwiftUI
 
 class EpisodeVM: ObservableObject {
 
-  //  @Published var apiEpisodeData: APIEpisodeData
   @Published var episodeResults: [EpisodeResult] = []
-  @Published var episodeInfo: [EpisodeInfo] = []
   
   let emptyResult: [EpisodeResult] = []
 
-//  var episodesArrayFull = false
   var currentPage = 1
   var totalPage: Int? = nil
-
-  private var cancellable: AnyCancellable?
-
-  //  private var lastConnection : GetAllEpisodesQuery.Data.Episode?
-  //  private var activeRequest: Cancellable?
 
   init(){
     fetchEpisodes(page: currentPage)

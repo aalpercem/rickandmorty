@@ -48,8 +48,10 @@ struct EpisodeDetailView: View {
   }
 }
 
+#if DEBUG
 struct EpisodeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EpisodeDetailView(id: "1", name: "Pilot", episodeCode: "S01E01", airDate: "1 Ocak 2022", characters: [])
     }
 }
+#endif

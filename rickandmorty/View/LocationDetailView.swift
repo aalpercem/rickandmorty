@@ -44,9 +44,10 @@ struct LocationDetailView: View {
   }
 }
 
-//struct LocationDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocationDetailView()
-//    }
-//}
-
+#if DEBUG
+struct LocationDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        LocationDetailView(name: "LocationName", dimension: "LocationDimension", residents: [])
+    }
+}
+#endif

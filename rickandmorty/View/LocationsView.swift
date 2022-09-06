@@ -30,8 +30,10 @@ struct LocationsView: View {
     }
 }
 
-//struct LocationsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocationsView()
-//    }
-//}
+#if DEBUG
+struct LocationsView_Previews: PreviewProvider {
+    static var previews: some View {
+        LocationsView(vm: LocationsVM())
+    }
+}
+#endif

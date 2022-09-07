@@ -15,39 +15,44 @@ struct EpisodesView: View {
   var body: some View {
 
     NavigationView {
-      ScrollView(.vertical, showsIndicators: false, content: {
-        LazyVStack{
-          ForEach(vm.episodeResults.indices, id: \.self){ resultindex in
-            let episodeResults = vm.episodeResults[resultindex]
-            EpisodeCard(
-              id: episodeResults.id,
-              name: episodeResults.name.rawValue,
-              episodeCode: episodeResults.episode.rawValue,
-              airDate: episodeResults.airDate,
-              characters: episodeResults.characters
-            )
-            .onAppear{
-              vm.reloadMoreData(resultIndex: resultindex)
-              //              vm.initalData()
-            }
-            //            .refreshable {
-            //              isPulled.toggle()
-            //              vm.refreshData(isPull: isPulled)
-            //            }
-          }
-          //          .onAppear(){
-          //            vm.initalData()
-          //          }
+      //      ScrollView(.vertical, showsIndicators: false, content: {
+      //      LazyVStack(alignment: .center, spacing: 0){
+      List{
+        ForEach(vm.episodeResults.indices, id: \.self) {
+          resultIndex in
+          let episodeResult = vm.episodeResults[resultIndex]
+          EpisodeCard(
+            id: episodeResult.id,
+            name: episodeResult.name.rawValue,
+            episodeCode: episodeResult.episode.rawValue,
+            airDate: episodeResult.airDate,
+            characters: episodeResult.characters
+          )
+          .listRowInsets(EdgeInsets())
+//          .background(.yellow)
         }
+        .listRowSeparator(.hidden)
       }
 
-                 //      }
-      )
+      .listStyle(PlainListStyle())
+      .refreshable {
+        isPulled.toggle()
+        vm.refreshData(isPull: isPulled)
+        isPulled.toggle()
+      }
+      .onAppear{
+        //FIXME: Only Hides
+        UITableView.appearance().showsVerticalScrollIndicator = false
+      }
+      //        }
+      //      }
+      //      )
       .navigationTitle("Episodes")
     }
   }
 }
 
+//MARK: REMOVE
 public struct RefreshableScrollView<Content: View>: View {
   var content: Content
   var onRefresh: () async -> ()

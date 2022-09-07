@@ -41,6 +41,18 @@ struct EpisodeCard: View {
         }
       }
       .padding()
+
+      NavigationLink(
+        "",
+        destination:
+          EpisodeDetailView(
+            id: id,
+            name: name,
+            episodeCode: episodeCode,
+            airDate: airDate,
+            characters: characters),
+        isActive: $isPresented
+      ).hidden()
     }
     .onTapGesture {
       isPresented.toggle()
@@ -53,17 +65,6 @@ struct EpisodeCard: View {
     .shadow(color: .gray, radius: 5, x: 8, y: 8)
     .padding()
 
-    NavigationLink(
-      "",
-      destination:
-        EpisodeDetailView(
-          id: id,
-          name: name,
-          episodeCode: episodeCode,
-          airDate: airDate,
-          characters: characters),
-      isActive: $isPresented
-    )
   }
 }
 

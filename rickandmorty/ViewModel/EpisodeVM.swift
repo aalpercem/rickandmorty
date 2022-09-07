@@ -78,13 +78,14 @@ class EpisodeVM: ObservableObject {
 
   func reloadMoreData (resultIndex: Int) {
     if resultIndex == episodeResults.count - 2{
-      guard currentPage-1 != totalPage else {
+      guard currentPage - 1 != totalPage else {
         return
       }
       fetchEpisodes(page: currentPage)
     }
   }
 
+  //TODO: REMOVE
   func initalData (){
     guard currentPage != totalPage else {
       return
@@ -93,7 +94,7 @@ class EpisodeVM: ObservableObject {
   }
 
   func refreshData(isPull: Bool) {
-    guard isPull && currentPage != totalPage else {
+    guard isPull && currentPage - 1 != totalPage else {
       return
     }
     fetchEpisodes(page: currentPage)

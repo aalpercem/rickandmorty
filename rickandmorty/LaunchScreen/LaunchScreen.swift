@@ -18,7 +18,7 @@ struct LaunchScreen: View {
         loopMode: .loop
       )
     }
-    .background(Color("primaryColor"))
+    .background(Color("bgColor"))
   }
 }
 

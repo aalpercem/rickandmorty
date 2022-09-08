@@ -60,7 +60,7 @@ struct EpisodeCard: View {
     .frame(width: screenWidth * 0.9)
     .frame(maxHeight: .infinity)
 //    .frame(idealHeight: screenHeight * 0.2)
-    .background(Color("primaryColor"))
+    .background(Color("cardColor"))
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: 8, y: 8)
     .padding()

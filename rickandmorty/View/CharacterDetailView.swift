@@ -41,7 +41,7 @@ struct CharacterDetailView: View {  //Page
 
         }
     }
-    .background(LinearGradient(gradient: Gradient(colors: [Color("primaryColor"), .white]), startPoint: .top, endPoint: .bottom))
+    .background(LinearGradient(gradient: Gradient(colors: [ Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))
   }
 }
 

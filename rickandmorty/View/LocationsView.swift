@@ -24,6 +24,7 @@ struct LocationsView: View {
   //          .searchable(text: characterData.name))
           }
           .listRowSeparator(.hidden)
+          .listRowBackground(LinearGradient(gradient: Gradient(colors: [.white, Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))
         }
         .listStyle(PlainListStyle())
         .refreshable {
@@ -35,6 +36,7 @@ struct LocationsView: View {
           //FIXME: Only Hides
           UITableView.appearance().showsVerticalScrollIndicator = false
         }
+//        .background(Color("bgColor"))
         .navigationTitle("Locations")
       }
     }

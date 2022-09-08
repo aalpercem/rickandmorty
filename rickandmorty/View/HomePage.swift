@@ -7,36 +7,42 @@
 
 import SwiftUI
 
+
 struct HomePage: View {
 
-
   @EnvironmentObject var launchScreenManager: LaunchScreenManager
-  
+
   var body: some View {
     TabView {
-      CharactersView(vm: CharacterVM()).tabItem{
-        Image(systemName: "person.3.fill")
-        Text("Characters")
-      }
-      .tag("CharactersTab")
+      CharactersView(vm: CharacterVM())
+        .tabItem{
+          Image(systemName: "person.3.fill")
+          Text("Characters")
+        }
+        .tag("CharactersTab")
 
-      LocationsView(vm: LocationVM()).tabItem{
-        Image(systemName: "map.fill")
-        Text("Locations")
-      }
-      .tag("LocationsTab")
+      LocationsView(vm: LocationVM())
+        .tabItem{
+          Image(systemName: "map.fill")
+          Text("Locations")
+        }
+        .tag("LocationsTab")
 
-      EpisodesView(vm: EpisodeVM()).tabItem{
-        Image(systemName: "book.fill")
-        Text("Episodes")
-      }
-      .tag("EpisodesTab")
+      EpisodesView(vm: EpisodeVM())
+        .tabItem{
+          Image(systemName: "book.fill")
+          Text("Episodes")
+        }
+        .tag("EpisodesTab")
     }
     .onAppear{
       DispatchQueue.main.asyncAfter(deadline: .now() + 5){
         launchScreenManager.dismiss()
       }
+//      UITabBar.appearance().barTintColor = .white
+//      UITabBar.appearance().backgroundColor = UIColor(named: "cardColor")
     }
+//    .tint(Color("red"))
   }
 }
 

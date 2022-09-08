@@ -68,7 +68,7 @@ struct CharacterCardView: View {
     .frame(width: deviceWidth * 0.8, alignment: .center)
     //    .frame(width: deviceWidth * 0.8) // ??? neden burda da var
     .frame(maxHeight: .infinity)
-    .background(Color("primaryColor"))
+    .background(Color("cardColor"))
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: shadowHorizontalOffset, y: shadowVerticalOffset)
     .padding(10)

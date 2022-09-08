@@ -58,7 +58,7 @@ struct LocationCardView: View {
       .frame(width: screenWidth * 0.8)
       //    .frame(idealHeight: screenHeight * 0.1)
       .frame(maxHeight: .infinity)
-      .background(Color("primaryColor"))
+      .background(Color("cardColor"))
       .cornerRadius(15)
       .shadow(color: .gray, radius: 5, x: 8, y: 8)
       .padding()

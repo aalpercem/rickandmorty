@@ -38,7 +38,7 @@ struct LocationDetailView: View {
           ResidentCircle(residents: residents)
         }
       }
-      .background(LinearGradient(gradient: Gradient(colors: [Color("primaryColor"), .white]), startPoint: .top, endPoint: .bottom))
+      .background(LinearGradient(gradient: Gradient(colors: [Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))
 //      .navigationTitle(name)
 
   }

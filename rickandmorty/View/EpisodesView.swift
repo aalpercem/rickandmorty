@@ -31,6 +31,7 @@ struct EpisodesView: View {
           .listRowInsets(EdgeInsets())
         }
         .listRowSeparator(.hidden)
+        .listRowBackground(Color("bgColor"))
       }
 
       .listStyle(PlainListStyle())
@@ -46,6 +47,7 @@ struct EpisodesView: View {
       //        }
       //      }
       //      )
+//      .background(Color("bgColor"))
       .navigationTitle("Episodes")
     }
   }

@@ -29,6 +29,7 @@ struct CharactersView: View {
           //.searchable(text: characterData.name))
         }
         .listRowSeparator(.hidden)
+        .listRowBackground(Color("bgColor"))
       }
       .listStyle(PlainListStyle())
       .refreshable {
@@ -44,6 +45,7 @@ struct CharactersView: View {
       .onChange(of: searchText) { searchText in
         print("Text değişti")
       }
+//      .background(Color("bgColor"))
       .navigationTitle("Characters")
     }
   }
@@ -52,13 +54,14 @@ struct CharactersView: View {
 #if DEBUG
 struct CharactersView_Previews: PreviewProvider {
   static var previews: some View {
-    CharacterCardView(
-      name: "Rick",
-      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      gender: "Male",
-      status: "Alive",
-      origin: CharacterOrigin.init(id: "101", name: Name.earthC137)
-    )
+    CharactersView(vm: CharacterVM())
+//    CharacterCardView(
+//      name: "Rick",
+//      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+//      gender: "Male",
+//      status: "Alive",
+//      origin: CharacterOrigin.init(id: "101", name: Name.earthC137)
+//    )
   }
 }
 #endif

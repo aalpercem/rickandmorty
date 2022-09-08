@@ -10,12 +10,18 @@ import SwiftUI
 @main
 struct rickandmortyApp: App {
 
-  @StateObject var homeVm = HomeVM()
+  @StateObject var launchScreenManager = LaunchScreenManager()
+//  @StateObject var homeVm = HomeVM()
 
     var body: some Scene {
         WindowGroup {
-            Home()
-            .environmentObject(homeVm)
+          ZStack{
+            HomePage()
+
+            if launchScreenManager.state != .completed {
+              LaunchScreen()
+            }
+          }.environmentObject(launchScreenManager)
         }
     }
 }

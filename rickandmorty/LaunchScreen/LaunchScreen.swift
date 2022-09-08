@@ -9,11 +9,13 @@ import SwiftUI
 
 struct LaunchScreen: View {
 
+  @EnvironmentObject var launchScreenManager: LaunchScreenManager
+
   var body: some View {
-    VStack{
+    VStack(alignment: .center, spacing: 0){
       LottieView(
-        fileName: "bored-hand-loading",
-        loopMode: .repeat(3)
+        fileName: "rocket-loader",
+        loopMode: .loop
       )
     }
     .background(Color("primaryColor"))
@@ -22,6 +24,6 @@ struct LaunchScreen: View {
 
 struct LaunchScreen_Previews: PreviewProvider {
   static var previews: some View {
-    LaunchScreen()
+    LaunchScreen().environmentObject(LaunchScreenManager())
   }
 }

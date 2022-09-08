@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  CharacterVM.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 18.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class HomeVM: ObservableObject {
+class CharacterVM: ObservableObject {
 
   //  @Published var searchQuery = ""
   @Published var characterResults: [CharacterResult] = []

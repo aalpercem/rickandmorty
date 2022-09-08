@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  HomePage.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 18.07.2022.
@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomePage: View {
 
-  @State var isLoading = false
+
+  @EnvironmentObject var launchScreenManager: LaunchScreenManager
   
   var body: some View {
     TabView {
-      CharactersView(vm: HomeVM()).tabItem{
+      CharactersView(vm: CharacterVM()).tabItem{
         Image(systemName: "person.3.fill")
         Text("Characters")
       }
       .tag("CharactersTab")
 
-      LocationsView(vm: LocationsVM()).tabItem{
+      LocationsView(vm: LocationVM()).tabItem{
         Image(systemName: "map.fill")
         Text("Locations")
       }
@@ -31,22 +32,18 @@ struct Home: View {
       }
       .tag("EpisodesTab")
     }
-    .overlay(loadingOverlay)
-  }
-
-  @ViewBuilder private var loadingOverlay: some View {
-    if isLoading {
-      LaunchScreen()
+    .onAppear{
+      DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+        launchScreenManager.dismiss()
+      }
     }
-
   }
-
 }
 
 #if DEBUG
 struct Home_Previews: PreviewProvider {
   static var previews: some View {
-    Home()
+    HomePage().environmentObject(LaunchScreenManager())
   }
 }
 #endif

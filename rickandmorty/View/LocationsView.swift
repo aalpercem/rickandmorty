@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationsView: View {
 
-  @ObservedObject var vm: LocationsVM
+  @ObservedObject var vm: LocationVM
   @State var isPulled: Bool = false
 
     var body: some View {
@@ -43,7 +43,7 @@ struct LocationsView: View {
 #if DEBUG
 struct LocationsView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationsView(vm: LocationsVM())
+        LocationsView(vm: LocationVM())
     }
 }
 #endif

@@ -1,5 +1,5 @@
 //
-//  LocationViewModel.swift
+//  LocationVM.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 31.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class LocationsVM: ObservableObject {
+class LocationVM: ObservableObject {
 
   @Published var locationResults: [LocationsResult] = []
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharactersView: View {
 
-  @ObservedObject var vm: HomeVM
+  @ObservedObject var vm: CharacterVM
   @State private var searchText = ""
   @State var isPulled: Bool = false
 

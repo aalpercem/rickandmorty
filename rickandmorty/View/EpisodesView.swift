@@ -37,7 +37,7 @@ struct EpisodesView: View {
       .listStyle(PlainListStyle())
       .refreshable {
         isPulled.toggle()
-        vm.refreshData(isPull: isPulled)
+        vm.refreshEpisodeData(isPull: isPulled)
         isPulled.toggle()
       }
       .onAppear{

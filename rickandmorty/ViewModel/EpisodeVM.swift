@@ -93,7 +93,7 @@ class EpisodeVM: ObservableObject {
     fetchEpisodes(page: currentPage)
   }
 
-  func refreshData(isPull: Bool) {
+  func refreshEpisodeData(isPull: Bool) {
     guard isPull && currentPage - 1 != totalPage else {
       return
     }

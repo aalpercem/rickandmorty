@@ -10,24 +10,31 @@ import SwiftUI
 struct LocationsView: View {
 
   @ObservedObject var vm: LocationsVM
+  @State var isPulled: Bool = false
 
     var body: some View {
       NavigationView {
-        ScrollView(.vertical, showsIndicators: false, content: {
-//          LottieView(fileName: "bored-hand-loading")
-//            .frame(width: 300, height: 300, alignment: .center)
-          VStack{
-            ForEach(vm.locationResults){ locationData in
-              LocationCardView(
-                name: locationData.name,
-                dimension: locationData.dimension,
-                residents: locationData.residents
-              )
-    //          .searchable(text: characterData.name))
-            }
+        List {
+          ForEach(vm.locationResults){ locationData in
+            LocationCardView(
+              name: locationData.name,
+              dimension: locationData.dimension,
+              residents: locationData.residents
+            )
+  //          .searchable(text: characterData.name))
           }
-
-        })
+          .listRowSeparator(.hidden)
+        }
+        .listStyle(PlainListStyle())
+        .refreshable {
+          isPulled.toggle()
+          vm.refreshLocationData(isPull: isPulled)
+          isPulled.toggle()
+        }
+        .onAppear{
+          //FIXME: Only Hides
+          UITableView.appearance().showsVerticalScrollIndicator = false
+        }
         .navigationTitle("Locations")
       }
     }

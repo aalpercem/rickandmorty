@@ -13,7 +13,8 @@ class LocationsVM: ObservableObject {
 
   let emptyResult: [LocationsResult] = []
 
-  var currentPage = 0
+  var currentPage = 1
+  var totalPage: Int? = nil
 
   init(){
     fetchLocations(page: currentPage)
@@ -29,7 +30,8 @@ class LocationsVM: ObservableObject {
         print("Success! Result:\(response)")
         if let locations = response.data?.locations{
           DispatchQueue.main.async {
-            let results: [LocationsResult] = locations.results?.map { item in
+            self.totalPage = locations.info?.pages
+            let _: [LocationsResult] = locations.results?.map { item in
               var locationResult = LocationsResult(id: "", name: "", dimension: "", residents: [])
               if let item = item {
 
@@ -47,11 +49,15 @@ class LocationsVM: ObservableObject {
 
                 locationResult = LocationsResult(id: item.id ?? "", name: item.name ?? "", dimension: item.dimension ?? "", residents: residents)
               }
+              self.locationResults.append(locationResult)
+
               return locationResult
 
             } ?? self.emptyResult
 
-            self.locationResults = results
+            self.currentPage += 1
+
+//            self.locationResults = results
           }
 
 
@@ -63,5 +69,14 @@ class LocationsVM: ObservableObject {
 
     }
   }
+
+  func refreshLocationData(isPull: Bool) {
+    guard isPull && currentPage - 1 != totalPage else {
+      return
+    }
+    fetchLocations(page: currentPage)
+  }
+
+
 }
 

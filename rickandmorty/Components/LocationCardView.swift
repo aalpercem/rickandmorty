@@ -40,6 +40,17 @@ struct LocationCardView: View {
           }
         }
         .padding()
+
+        NavigationLink(
+          "",
+          destination:
+            LocationDetailView(
+              name: name,
+              dimension: dimension,
+              residents: residents
+            ),
+          isActive: $isPresented
+        ).hidden()
       }
       .onTapGesture {
         isPresented.toggle()
@@ -51,18 +62,6 @@ struct LocationCardView: View {
       .cornerRadius(15)
       .shadow(color: .gray, radius: 5, x: 8, y: 8)
       .padding()
-
-
-      NavigationLink(
-        "",
-        destination:
-          LocationDetailView(
-            name: name,
-            dimension: dimension,
-            residents: residents
-          ),
-        isActive: $isPresented
-      )
     }
   }
 }

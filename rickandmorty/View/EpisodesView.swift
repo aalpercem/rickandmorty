@@ -29,7 +29,6 @@ struct EpisodesView: View {
             characters: episodeResult.characters
           )
           .listRowInsets(EdgeInsets())
-//          .background(.yellow)
         }
         .listRowSeparator(.hidden)
       }
@@ -37,7 +36,7 @@ struct EpisodesView: View {
       .listStyle(PlainListStyle())
       .refreshable {
         isPulled.toggle()
-        vm.refreshEpisodeData(isPull: isPulled)
+        vm.refreshEpisodeData(isPulled: isPulled)
         isPulled.toggle()
       }
       .onAppear{

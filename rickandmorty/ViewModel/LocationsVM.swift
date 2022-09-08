@@ -56,22 +56,17 @@ class LocationsVM: ObservableObject {
             } ?? self.emptyResult
 
             self.currentPage += 1
-
 //            self.locationResults = results
           }
-
-
         }
       case .failure(let error):
         print("Failure!! Error: \(error)")
       }
-
-
     }
   }
 
-  func refreshLocationData(isPull: Bool) {
-    guard isPull && currentPage - 1 != totalPage else {
+  func refreshLocationData(isPulled: Bool) {
+    guard isPulled && currentPage - 1 != totalPage else {
       return
     }
     fetchLocations(page: currentPage)

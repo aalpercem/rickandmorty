@@ -13,10 +13,11 @@ class HomeVM: ObservableObject {
 
   let emptyResult: [CharacterResult] = []
 
+  var currentPage = 1
+  var totalPage: Int? = nil
+
   init(){
-    //    for page in 1...42 {
-    fetchCharacters(page: 13)
-    //    }
+    fetchCharacters(page: currentPage)
   }
 
   func fetchCharacters(page: Int){
@@ -29,32 +30,54 @@ class HomeVM: ObservableObject {
         print("Success! Result:\(response)")
         if let characters = response.data?.characters{
           DispatchQueue.main.async {
-            let results: [CharacterResult] = characters.results?.map { item in
+            self.totalPage = characters.info?.pages
+            let _: [CharacterResult] = characters.results?.map { item in
               var characterResult = CharacterResult(id: "", image: "", name: "", gender: .unknown, status: .unknown, origin: .init(id: "", name: .unknown, dimension: .unknown))
               if let item = item {
-                characterResult = CharacterResult(id: item.id ?? "",
-                                                  image: item.image ?? "",
-                                                  name: item.name ?? "",
-                                                  gender: CharacterGender(rawValue: (item.gender)!) ?? .unknown,
-                                                  status: CharacterStatus(rawValue: (item.status)!) ?? .unknown,
-                                                  origin: CharacterOrigin(id: item.origin?.id ?? "",
-                                                                          // TODO: ?Burası Neden aynı çalışmıyor?
-                                                                          name: Name(rawValue: (item.origin?.name)!) ?? .unknown,
-                                                                          dimension:
-                                                                            Dimension(rawValue: (item.origin?.dimension) ?? "unknown")
-                                                                         ))
+                characterResult = CharacterResult(
+                  id: item.id ?? "",
+                  image: item.image ?? "",
+                  name: item.name ?? "",
+                  gender: CharacterGender(rawValue: (item.gender)!) ?? .unknown,
+                  status: CharacterStatus(rawValue: (item.status)!) ?? .unknown,
+                  origin: CharacterOrigin(
+                    id: item.origin?.id ?? "",
+                    // TODO: ?Burası Neden aynı çalışmıyor?
+                    name: Name(rawValue: (item.origin?.name)!) ?? .unknown,
+                    dimension:
+                      Dimension(rawValue: (item.origin?.dimension) ?? "unknown")
+                  ))
               }
+              self.characterResults.append(characterResult)
+
               return characterResult
               //CharacterOrigin(rawValue: item?.origin)!) ?? nil
             } ?? self.emptyResult
 
-            self.characterResults = results
+            self.currentPage += 1
+//            self.characterResults = results
           }
         }
       case .failure(let error):
         print("Failure!! Error: \(error)")
       }
     }
+  }
+
+  func reloadMoreData (resultIndex: Int) {
+    if resultIndex == characterResults.count - 2{
+      guard currentPage - 1 != totalPage else {
+        return
+      }
+      fetchCharacters(page: currentPage)
+    }
+  }
+
+  func refreshCharacterData(isPulled: Bool) {
+    guard isPulled && currentPage - 1 != totalPage else {
+      return
+    }
+    fetchCharacters(page: currentPage)
   }
 }
 

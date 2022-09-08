@@ -28,7 +28,7 @@ struct LocationsView: View {
         .listStyle(PlainListStyle())
         .refreshable {
           isPulled.toggle()
-          vm.refreshLocationData(isPull: isPulled)
+          vm.refreshLocationData(isPulled: isPulled)
           isPulled.toggle()
         }
         .onAppear{

@@ -19,8 +19,8 @@ struct CharacterCardView: View {
 
   var name: String
   var image: String
-  var gender: CharacterGender
-  var status: CharacterStatus
+  var gender: String
+  var status: String
   var origin: CharacterOrigin
 
   var circleColor: Color = .white
@@ -40,28 +40,38 @@ struct CharacterCardView: View {
 
       VStack(alignment: .leading, spacing: 5){
         Text("\(name)").font(.largeTitle)
-        Text("\(gender.rawValue)").font(.title3)
+        Text("\(gender)").font(.title3)
         HStack() {
-          Text("\(status.rawValue)").font(.title3)
-          StatusCircle(status: status.rawValue)
+          Text("\(status)").font(.title3)
+          StatusCircle(status: status)
           Spacer()
           Image(systemName: "chevron.right")
         }
       }.padding()
+
+      NavigationLink("",
+                     destination:
+                      CharacterDetailView(
+                        image: image,
+                        name: name,
+                        gender: gender,
+                        status: status,
+                        originName: origin.name.rawValue,
+                        originDimension: origin.dimension?.rawValue ?? ""
+                      ),
+                     isActive: $isPresented).hidden()
 
     }
     .onTapGesture {
       isPresented.toggle()
     }
     .frame(width: deviceWidth * 0.8, alignment: .center)
-//    .frame(width: deviceWidth * 0.8) // ??? neden burda da var
+    //    .frame(width: deviceWidth * 0.8) // ??? neden burda da var
     .frame(maxHeight: .infinity)
     .background(Color("primaryColor"))
     .cornerRadius(15)
     .shadow(color: .gray, radius: 5, x: shadowHorizontalOffset, y: shadowVerticalOffset)
     .padding(10)
-
-    NavigationLink("", destination: CharacterDetailView(image: image, name: name, gender: gender.rawValue, status: status.rawValue, originName: origin.name.rawValue, originDimension: origin.dimension?.rawValue ?? ""), isActive: $isPresented)
   }
 
 }
@@ -73,8 +83,8 @@ struct CharacterCardView_Previews: PreviewProvider {
     CharacterCardView(
       name: "Rick Sanchez",
       image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      gender: CharacterGender(rawValue: "Male") ?? .unknown,
-      status: CharacterStatus(rawValue: "Alive") ?? .unknown,
+      gender: "Male",
+      status: "Alive",
       origin: CharacterOrigin(id: "123", name: Name(rawValue: "Earth") ?? .unknown)
     )
   }

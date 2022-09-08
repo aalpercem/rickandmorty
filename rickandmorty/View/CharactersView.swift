@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharactersView: View {
 
-  @EnvironmentObject var vm: HomeVM
+  @ObservedObject var vm: HomeVM
   @State private var searchText = ""
   @State var isPulled: Bool = false
 
@@ -40,14 +40,11 @@ struct CharactersView: View {
         //FIXME: Only Hides
         UITableView.appearance().showsVerticalScrollIndicator = false
       }
-
-
       .searchable(text: $searchText, prompt: "Look for character")
       .onChange(of: searchText) { searchText in
         print("Text değişti")
       }
       .navigationTitle("Characters")
-
     }
   }
 }

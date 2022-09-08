@@ -14,15 +14,16 @@ struct LottieView: UIViewRepresentable {
   typealias UIViewType = UIView
 
   var fileName: String
+  var loopMode: LottieLoopMode = .playOnce
 
-  func makeUIView(context: Context) -> UIView {
+  func makeUIView(context _: UIViewRepresentableContext<LottieView>) -> UIView {
     let view = UIView(frame: .zero)
 
     //Animation
     let animationView = AnimationView()
     animationView.animation = Animation.named(fileName)
     animationView.contentMode = .scaleAspectFit
-    animationView.loopMode = .loop
+    animationView.loopMode = loopMode
     animationView.play()
     view.addSubview(animationView)
 
@@ -36,10 +37,11 @@ struct LottieView: UIViewRepresentable {
     return view
   }
 
-  func updateUIView(_ uiView: UIView, context: Context) {
-    //
-  }
+  func updateUIView(_: UIView, context _: UIViewRepresentableContext<LottieView>) {}
+}
 
-
-
+struct AnimationView_Previews: PreviewProvider {
+    static var previews: some View {
+        LottieView(fileName: "rocket-loader", loopMode: .autoReverse)
+    }
 }

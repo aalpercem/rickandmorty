@@ -10,7 +10,7 @@ import SwiftUI
 class EpisodeVM: ObservableObject {
 
   @Published var episodeResults: [EpisodeResult] = []
-  
+
   let emptyResult: [EpisodeResult] = []
 
   var currentPage = 1
@@ -38,7 +38,6 @@ class EpisodeVM: ObservableObject {
                 var resultCharacters: [EpisodeCharacter] = []
 
                 for character in item.characters {
-
                   // Add Character to List
                   resultCharacters.append(
                     EpisodeCharacter(
@@ -60,20 +59,16 @@ class EpisodeVM: ObservableObject {
                   characters: resultCharacters)
               }
               self.episodeResults.append(episodeResult)
-
               return episodeResult
 
             }  ?? self.emptyResult
             self.currentPage += 1
           }
-
         }
       case .failure(let error):
         print("Failure!! Error: \(error)")
       }
-
     }
-    //    return self.episodeResults
   }
 
   func reloadMoreData (resultIndex: Int) {
@@ -83,14 +78,6 @@ class EpisodeVM: ObservableObject {
       }
       fetchEpisodes(page: currentPage)
     }
-  }
-
-  //TODO: REMOVE
-  func initalData (){
-    guard currentPage != totalPage else {
-      return
-    }
-    fetchEpisodes(page: currentPage)
   }
 
   func refreshEpisodeData(isPulled: Bool) {
@@ -104,6 +91,5 @@ class EpisodeVM: ObservableObject {
   //    let fetchedEpisodes = await fetchEpisodes(page: page)
   //    return fetchedEpisodes
   //  }
-
 }
 

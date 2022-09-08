@@ -34,7 +34,6 @@ class LocationsVM: ObservableObject {
             let _: [LocationsResult] = locations.results?.map { item in
               var locationResult = LocationsResult(id: "", name: "", dimension: "", residents: [])
               if let item = item {
-
                 var residents: [LocationsResident] = []
 
                 for resident in item.residents {
@@ -46,17 +45,13 @@ class LocationsVM: ObservableObject {
                       status: LocationsStatus(rawValue: (resident?.status)!) ?? .unknown)
                   )
                 }
-
                 locationResult = LocationsResult(id: item.id ?? "", name: item.name ?? "", dimension: item.dimension ?? "", residents: residents)
               }
               self.locationResults.append(locationResult)
-
               return locationResult
 
             } ?? self.emptyResult
-
             self.currentPage += 1
-//            self.locationResults = results
           }
         }
       case .failure(let error):
@@ -71,7 +66,6 @@ class LocationsVM: ObservableObject {
     }
     fetchLocations(page: currentPage)
   }
-
 
 }
 

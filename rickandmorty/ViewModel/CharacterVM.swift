@@ -8,6 +8,7 @@
 import SwiftUI
 
 class HomeVM: ObservableObject {
+
   //  @Published var searchQuery = ""
   @Published var characterResults: [CharacterResult] = []
 
@@ -49,13 +50,11 @@ class HomeVM: ObservableObject {
                   ))
               }
               self.characterResults.append(characterResult)
-
               return characterResult
-              //CharacterOrigin(rawValue: item?.origin)!) ?? nil
+
             } ?? self.emptyResult
 
             self.currentPage += 1
-//            self.characterResults = results
           }
         }
       case .failure(let error):
@@ -64,6 +63,7 @@ class HomeVM: ObservableObject {
     }
   }
 
+  //MARK: For scrolling
   func reloadMoreData (resultIndex: Int) {
     if resultIndex == characterResults.count - 2{
       guard currentPage - 1 != totalPage else {

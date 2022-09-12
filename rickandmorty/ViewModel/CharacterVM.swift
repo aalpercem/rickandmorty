@@ -11,10 +11,11 @@ class CharacterVM: ObservableObject {
 
   //  @Published var searchQuery = ""
   @Published var characterResults: [CharacterResult] = []
+  @Published var isPulled: Bool = false
+  @Published var currentPage = 1
 
   let emptyResult: [CharacterResult] = []
 
-  var currentPage = 1
   var totalPage: Int? = nil
 
   init(){
@@ -54,6 +55,7 @@ class CharacterVM: ObservableObject {
 
             } ?? self.emptyResult
 
+            self.objectWillChange.send()
             self.currentPage += 1
           }
         }
@@ -73,11 +75,12 @@ class CharacterVM: ObservableObject {
     }
   }
 
-  func refreshCharacterData(isPulled: Bool) {
+  func refreshCharacterData() {
     guard isPulled && currentPage - 1 != totalPage else {
       return
     }
     fetchCharacters(page: currentPage)
+    self.isPulled = false
   }
 }
 

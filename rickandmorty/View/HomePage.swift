@@ -35,13 +35,13 @@ struct HomePage: View {
         }
         .tag("EpisodesTab")
     }
-    .onAppear{
-      DispatchQueue.main.asyncAfter(deadline: .now() + 5){
-        launchScreenManager.dismiss()
-      }
+//    .onAppear{
+//      DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+//        launchScreenManager.dismiss()
+//      }
 //      UITabBar.appearance().barTintColor = .white
 //      UITabBar.appearance().backgroundColor = UIColor(named: "cardColor")
-    }
+//    }
 //    .tint(Color("red"))
   }
 }

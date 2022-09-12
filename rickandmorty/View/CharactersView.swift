@@ -11,10 +11,8 @@ struct CharactersView: View {
 
   @ObservedObject var vm: CharacterVM
   @State private var searchText = ""
-  @State var isPulled: Bool = false
 
   var body: some View {
-
     NavigationView {
       List{
         ForEach(vm.characterResults){ result in
@@ -32,9 +30,8 @@ struct CharactersView: View {
       }
       .listStyle(PlainListStyle())
       .refreshable {
-        isPulled.toggle()
-        vm.refreshCharacterData(isPulled: isPulled)
-        isPulled.toggle()
+        vm.isPulled = true
+        vm.refreshCharacterData()
       }
       .onAppear{
         //FIXME: Only Hides
@@ -44,7 +41,6 @@ struct CharactersView: View {
       .onChange(of: searchText) { searchText in
         print("Text değişti")
       }
-//      .background(Color("bgColor"))
       .navigationTitle("Characters")
     }
   }

@@ -30,7 +30,6 @@ struct CharacterDetailView: View {  //Page
               Text(status)
               StatusCircle(status: status)
             }
-
           }
           Section("ORIGIN"){
             Text(originName)
@@ -38,7 +37,6 @@ struct CharacterDetailView: View {  //Page
           Section("DIMENSION"){
             Text(originDimension)
           }
-
         }
     }
     .background(LinearGradient(gradient: Gradient(colors: [ Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))

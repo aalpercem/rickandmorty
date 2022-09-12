@@ -35,7 +35,6 @@ struct LocationsView: View {
           //FIXME: Only Hides
           UITableView.appearance().showsVerticalScrollIndicator = false
         }
-//        .background(Color("bgColor"))
         .navigationTitle("Locations")
       }
     }

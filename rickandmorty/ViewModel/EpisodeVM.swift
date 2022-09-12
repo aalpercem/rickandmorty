@@ -71,15 +71,6 @@ class EpisodeVM: ObservableObject {
     }
   }
 
-  func reloadMoreData (resultIndex: Int) {
-    if resultIndex == episodeResults.count - 2{
-      guard currentPage - 1 != totalPage else {
-        return
-      }
-      fetchEpisodes(page: currentPage)
-    }
-  }
-
   func refreshEpisodeData(isPulled: Bool) {
     guard isPulled && currentPage - 1 != totalPage else {
       return
@@ -87,9 +78,4 @@ class EpisodeVM: ObservableObject {
     fetchEpisodes(page: currentPage)
   }
   
-  //  func reloadData(page: Int) async -> [EpisodeResult] {
-  //    let fetchedEpisodes = await fetchEpisodes(page: page)
-  //    return fetchedEpisodes
-  //  }
 }
-

@@ -17,14 +17,13 @@ struct CharactersView: View {
 
     NavigationView {
       List{
-        ForEach(vm.characterResults.indices, id:\.self){ resultIndex in
-          let characterResult = vm.characterResults[resultIndex]
+        ForEach(vm.characterResults){ result in
           CharacterCardView(
-            name: characterResult.name,
-            image: characterResult.image,
-            gender: characterResult.gender.rawValue,
-            status: characterResult.status.rawValue,
-            origin: characterResult.origin
+            name: result.name,
+            image: result.image,
+            gender: result.gender.rawValue,
+            status: result.status.rawValue,
+            origin: result.origin
           )
           //.searchable(text: characterData.name))
         }
@@ -55,13 +54,6 @@ struct CharactersView: View {
 struct CharactersView_Previews: PreviewProvider {
   static var previews: some View {
     CharactersView(vm: CharacterVM())
-//    CharacterCardView(
-//      name: "Rick",
-//      image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-//      gender: "Male",
-//      status: "Alive",
-//      origin: CharacterOrigin.init(id: "101", name: Name.earthC137)
-//    )
   }
 }
 #endif

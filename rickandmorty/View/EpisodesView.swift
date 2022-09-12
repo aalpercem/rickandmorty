@@ -18,15 +18,14 @@ struct EpisodesView: View {
       //      ScrollView(.vertical, showsIndicators: false, content: {
       //      LazyVStack(alignment: .center, spacing: 0){
       List{
-        ForEach(vm.episodeResults.indices, id: \.self) {
-          resultIndex in
-          let episodeResult = vm.episodeResults[resultIndex]
+        ForEach(vm.episodeResults) {
+          result in
           EpisodeCard(
-            id: episodeResult.id,
-            name: episodeResult.name.rawValue,
-            episodeCode: episodeResult.episode.rawValue,
-            airDate: episodeResult.airDate,
-            characters: episodeResult.characters
+            id: result.id,
+            name: result.name.rawValue,
+            episodeCode: result.episode.rawValue,
+            airDate: result.airDate,
+            characters: result.characters
           )
           .listRowInsets(EdgeInsets())
         }

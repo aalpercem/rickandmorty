@@ -15,16 +15,15 @@ struct LocationsView: View {
     var body: some View {
       NavigationView {
         List {
-          ForEach(vm.locationResults){ locationData in
+          ForEach(vm.locationResults){ result in
             LocationCardView(
-              name: locationData.name,
-              dimension: locationData.dimension,
-              residents: locationData.residents
+              name: result.name,
+              dimension: result.dimension,
+              residents: result.residents
             )
-  //          .searchable(text: characterData.name))
           }
           .listRowSeparator(.hidden)
-          .listRowBackground(LinearGradient(gradient: Gradient(colors: [.white, Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))
+          .listRowBackground(Color("bgColor"))
         }
         .listStyle(PlainListStyle())
         .refreshable {

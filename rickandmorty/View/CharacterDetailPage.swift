@@ -1,5 +1,5 @@
 //
-//  CharacterDetailView.swift
+//  CharacterDetailPage.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 17.08.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterDetailView: View {  //Page
+struct CharacterDetailPage: View {
 
   var image: String
   var name: String
@@ -46,7 +46,7 @@ struct CharacterDetailView: View {  //Page
 #if DEBUG
 struct CharacterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-      CharacterDetailView(
+      CharacterDetailPage(
         image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
         name: "Rick Sanchez",
         gender: "Male",

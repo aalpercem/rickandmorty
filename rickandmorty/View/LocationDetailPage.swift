@@ -1,5 +1,5 @@
 //
-//  LocationDetailView.swift
+//  LocationDetailPage.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 31.08.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LocationDetailView: View {
+struct LocationDetailPage: View {
 
   var name: String
   var dimension: String
@@ -47,7 +47,7 @@ struct LocationDetailView: View {
 #if DEBUG
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationDetailView(
+        LocationDetailPage(
           name: "LocationName",
           dimension: "LocationDimension",
           residents: []

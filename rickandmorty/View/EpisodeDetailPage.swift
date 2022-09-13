@@ -1,5 +1,5 @@
 //
-//  EpisodeDetailView.swift
+//  EpisodeDetailPage.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 2.09.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EpisodeDetailView: View {
+struct EpisodeDetailPage: View {
 
   var id: String
   var name: String
@@ -51,7 +51,7 @@ struct EpisodeDetailView: View {
 #if DEBUG
 struct EpisodeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EpisodeDetailView(
+        EpisodeDetailPage(
           id: "1",
           name: "Pilot",
           episodeCode: "S01E01",

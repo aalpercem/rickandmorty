@@ -20,7 +20,7 @@ struct rickandmortyApp: App {
 //            if launchScreenManager.state != .completed {
 //              LaunchScreen()
 //            }
-          }.environmentObject(launchScreenManager)
+          }//.environmentObject(launchScreenManager)
         }
     }
 }

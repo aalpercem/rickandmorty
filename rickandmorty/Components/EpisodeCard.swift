@@ -45,7 +45,7 @@ struct EpisodeCard: View {
       NavigationLink(
         "",
         destination:
-          EpisodeDetailView(
+          EpisodeDetailPage(
             id: id,
             name: name,
             episodeCode: episodeCode,

@@ -51,7 +51,7 @@ struct CharacterCardView: View {
 
       NavigationLink("",
                      destination:
-                      CharacterDetailView(
+                      CharacterDetailPage(
                         image: image,
                         name: name,
                         gender: gender,

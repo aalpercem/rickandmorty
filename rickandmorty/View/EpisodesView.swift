@@ -10,7 +10,6 @@ import SwiftUI
 struct EpisodesView: View {
 
   @ObservedObject var vm: EpisodeVM
-  @State var isPulled: Bool = false
 
   var body: some View {
 
@@ -35,18 +34,13 @@ struct EpisodesView: View {
 
       .listStyle(PlainListStyle())
       .refreshable {
-        isPulled.toggle()
-        vm.refreshEpisodeData(isPulled: isPulled)
-        isPulled.toggle()
+        vm.isPulled = true
+        vm.refreshEpisodeData()
       }
       .onAppear{
         //FIXME: Only Hides
         UITableView.appearance().showsVerticalScrollIndicator = false
       }
-      //        }
-      //      }
-      //      )
-//      .background(Color("bgColor"))
       .navigationTitle("Episodes")
     }
   }

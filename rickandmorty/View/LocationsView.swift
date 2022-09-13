@@ -10,7 +10,6 @@ import SwiftUI
 struct LocationsView: View {
 
   @ObservedObject var vm: LocationVM
-  @State var isPulled: Bool = false
 
     var body: some View {
       NavigationView {
@@ -27,9 +26,9 @@ struct LocationsView: View {
         }
         .listStyle(PlainListStyle())
         .refreshable {
-          isPulled.toggle()
-          vm.refreshLocationData(isPulled: isPulled)
-          isPulled.toggle()
+          vm.isPulled = true
+          vm.refreshLocationData()
+
         }
         .onAppear{
           //FIXME: Only Hides

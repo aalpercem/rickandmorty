@@ -44,7 +44,7 @@ struct LocationCardView: View {
         NavigationLink(
           "",
           destination:
-            LocationDetailView(
+            LocationDetailPage(
               name: name,
               dimension: dimension,
               residents: residents

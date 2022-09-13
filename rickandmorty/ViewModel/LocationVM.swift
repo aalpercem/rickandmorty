@@ -10,10 +10,10 @@ import SwiftUI
 class LocationVM: ObservableObject {
 
   @Published var locationResults: [LocationsResult] = []
+  @Published var isPulled: Bool = false
+  @Published var currentPage: Int = 1
 
   let emptyResult: [LocationsResult] = []
-
-  var currentPage = 1
   var totalPage: Int? = nil
 
   init(){
@@ -60,11 +60,12 @@ class LocationVM: ObservableObject {
     }
   }
 
-  func refreshLocationData(isPulled: Bool) {
+  func refreshLocationData() {
     guard isPulled && currentPage - 1 != totalPage else {
       return
     }
     fetchLocations(page: currentPage)
+    self.isPulled = false
   }
 
 }

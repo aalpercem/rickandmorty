@@ -16,13 +16,28 @@ struct CharactersView: View {
     NavigationView {
       List{
         ForEach(vm.characterResults){ result in
-          CharacterCardView(
-            name: result.name,
-            image: result.image,
-            gender: result.gender.rawValue,
-            status: result.status.rawValue,
-            origin: result.origin
-          )
+          ZStack{
+            CharacterCardView(
+              name: result.name,
+              image: result.image,
+              gender: result.gender.rawValue,
+              status: result.status.rawValue,
+              origin: result.origin
+            )
+            NavigationLink(destination:
+                            CharacterDetailPage(
+              image: result.image,
+              name: result.name,
+              gender: result.gender.rawValue,
+              status: result.status.rawValue,
+              originName: result.origin.name.rawValue ?? "",
+              originDimension: result.origin.dimension?.rawValue ?? ""
+            )) {
+              EmptyView()
+            }
+            .opacity(0.0)
+            .buttonStyle(PlainButtonStyle())
+          }
           //.searchable(text: characterData.name))
         }
         .listRowSeparator(.hidden)
@@ -46,10 +61,9 @@ struct CharactersView: View {
   }
 }
 
-#if DEBUG
+
 struct CharactersView_Previews: PreviewProvider {
   static var previews: some View {
     CharactersView(vm: CharacterVM())
   }
 }
-#endif

@@ -48,7 +48,6 @@ struct EpisodeDetailPage: View {
   }
 }
 
-#if DEBUG
 struct EpisodeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         EpisodeDetailPage(
@@ -59,4 +58,3 @@ struct EpisodeDetailView_Previews: PreviewProvider {
           characters: [])
     }
 }
-#endif

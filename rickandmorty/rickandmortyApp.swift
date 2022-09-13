@@ -17,6 +17,7 @@ struct rickandmortyApp: App {
         WindowGroup {
           ZStack{
             HomePage()
+            // counter
 //            if launchScreenManager.state != .completed {
 //              LaunchScreen()
 //            }

@@ -39,34 +39,17 @@ struct CharacterCardView: View {
       .scaledToFill()
 
       VStack(alignment: .leading, spacing: 5){
-        Text("\(name)").font(.largeTitle)
-        Text("\(gender)").font(.title3)
+        Text(name).font(.largeTitle)
+        Text(gender).font(.title3)
         HStack() {
-          Text("\(status)").font(.title3)
+          Text(status).font(.title3)
           StatusCircle(status: status)
           Spacer()
           Image(systemName: "chevron.right")
         }
       }.padding()
-
-      NavigationLink("",
-                     destination:
-                      CharacterDetailPage(
-                        image: image,
-                        name: name,
-                        gender: gender,
-                        status: status,
-                        originName: origin.name.rawValue,
-                        originDimension: origin.dimension?.rawValue ?? ""
-                      ),
-                     isActive: $isPresented).hidden()
-
-    }
-    .onTapGesture {
-      isPresented.toggle()
     }
     .frame(width: deviceWidth * 0.8, alignment: .center)
-    //    .frame(width: deviceWidth * 0.8) // ??? neden burda da var
     .frame(maxHeight: .infinity)
     .background(Color("cardColor"))
     .cornerRadius(15)

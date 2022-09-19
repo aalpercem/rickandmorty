@@ -29,10 +29,11 @@ class LocationVM: ObservableObject {
       case let .success(response):
         print("Success! Result:\(response)")
         if let locations = response.data?.locations{
-          DispatchQueue.main.async {
+
             self.totalPage = locations.info?.pages
-            let _: [LocationsResult] = locations.results?.map { item in
-              var locationResult = LocationsResult(id: "", name: "", dimension: "", residents: [])
+
+            locations.results?.forEach { item in
+              
               if let item = item {
                 var residents: [LocationsResident] = []
 
@@ -45,14 +46,17 @@ class LocationVM: ObservableObject {
                       status: LocationsStatus(rawValue: (resident?.status)!) ?? .unknown)
                   )
                 }
-                locationResult = LocationsResult(id: item.id ?? "", name: item.name ?? "", dimension: item.dimension ?? "", residents: residents)
+                let locationResult = LocationsResult(
+                  id: item.id ?? "",
+                  name: item.name ?? "",
+                  dimension: item.dimension ?? "",
+                  residents: residents
+                )
+                self.locationResults.append(locationResult)
               }
-              self.locationResults.append(locationResult)
-              return locationResult
-
-            } ?? self.emptyResult
+            }
             self.currentPage += 1
-          }
+
         }
       case .failure(let error):
         print("Failure!! Error: \(error)")
@@ -69,4 +73,5 @@ class LocationVM: ObservableObject {
   }
 
 }
+
 

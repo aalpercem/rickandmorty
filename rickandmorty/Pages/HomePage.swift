@@ -14,21 +14,21 @@ struct HomePage: View {
 
   var body: some View {
     TabView {
-      CharactersView(vm: CharacterVM())
+      CharactersPageView(vm: CharacterVM())
         .tabItem{
           Image(systemName: "person.3.fill")
           Text("Characters")
         }
         .tag("CharactersTab")
 
-      LocationsView(vm: LocationVM())
+      LocationsPageView(vm: LocationVM())
         .tabItem{
           Image(systemName: "map.fill")
           Text("Locations")
         }
         .tag("LocationsTab")
 
-      EpisodesView(vm: EpisodeVM())
+      EpisodesPageView(vm: EpisodeVM())
         .tabItem{
           Image(systemName: "book.fill")
           Text("Episodes")

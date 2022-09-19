@@ -1,5 +1,5 @@
 //
-//  LocationCardView.swift
+//  LocationCard.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 31.07.2022.
@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct LocationCardView: View {
+struct LocationCard: View {
 
-  @State var isPresented = false
+  //  @State var isPresented = false
 
   let screenWidth = UIScreen.main.bounds.size.width
   let screenHeight = UIScreen.main.bounds.size.height
 
-  var name: String
-  var dimension: String
-  var residents: [LocationsResident]
+  var result: LocationsResult
 
   var body: some View {
+
+    let name = result.name
+    let dimension = result.dimension
+
     VStack{
       VStack(alignment: .leading, spacing: 5){
 
@@ -40,23 +42,8 @@ struct LocationCardView: View {
           }
         }
         .padding()
-
-        NavigationLink(
-          "",
-          destination:
-            LocationDetailPage(
-              name: name,
-              dimension: dimension,
-              residents: residents
-            ),
-          isActive: $isPresented
-        ).hidden()
       }
-      .onTapGesture {
-        isPresented.toggle()
-      }
-      .frame(width: screenWidth * 0.8)
-      //    .frame(idealHeight: screenHeight * 0.1)
+      .frame(width: screenWidth * 0.8, alignment: .center)
       .frame(maxHeight: .infinity)
       .background(Color("cardColor"))
       .cornerRadius(15)
@@ -67,13 +54,16 @@ struct LocationCardView: View {
 }
 
 #if DEBUG
-struct LocationCardView_Previews: PreviewProvider {
+struct LocationCard_Previews: PreviewProvider {
   static var previews: some View {
-    LocationCardView(
-      name: "Earth",
+    LocationCard(result: LocationsResult(
+      id: "",
+      name: "Rick Sanchez",
       dimension: "C-137",
       residents: []
+    )
     )
   }
 }
 #endif
+

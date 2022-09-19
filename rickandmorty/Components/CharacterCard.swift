@@ -1,5 +1,5 @@
 //
-//  CharacterCardView.swift
+//  CharacterCard.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 20.07.2022.
@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct CharacterCardView: View {
-
-  @State var isPresented = false
+struct CharacterCard: View {
 
   let deviceHeight = UIScreen.main.bounds.height
   let deviceWidth = UIScreen.main.bounds.width
@@ -17,15 +15,14 @@ struct CharacterCardView: View {
   var shadowHorizontalOffset = 3.0
   var shadowVerticalOffset = 8.0
 
-  var name: String
-  var image: String
-  var gender: String
-  var status: String
-  var origin: CharacterOrigin
-
-  var circleColor: Color = .white
+  var result: CharacterResult
 
   var body: some View {
+
+    let image = result.image
+    let name = result.name
+    let gender = result.gender.rawValue
+    let status = result.status.rawValue
 
     VStack(alignment: .leading, spacing: 10) {
       AsyncImage(url: URL(string: image)){ image in
@@ -39,10 +36,13 @@ struct CharacterCardView: View {
       .scaledToFill()
 
       VStack(alignment: .leading, spacing: 5){
-        Text(name).font(.largeTitle)
-        Text(gender).font(.title3)
+        Text(name)
+          .font(.largeTitle)
+        Text(gender)
+          .font(.title3)
         HStack() {
-          Text(status).font(.title3)
+          Text(status)
+            .font(.title3)
           StatusCircle(status: status)
           Spacer()
           Image(systemName: "chevron.right")
@@ -53,22 +53,30 @@ struct CharacterCardView: View {
     .frame(maxHeight: .infinity)
     .background(Color("cardColor"))
     .cornerRadius(15)
-    .shadow(color: .gray, radius: 5, x: shadowHorizontalOffset, y: shadowVerticalOffset)
+    .shadow(color: .gray,
+            radius: 5,
+            x: shadowHorizontalOffset,
+            y: shadowVerticalOffset
+    )
     .padding(10)
   }
-
 }
 
-
 #if DEBUG
-struct CharacterCardView_Previews: PreviewProvider {
+struct CharacterCard_Previews: PreviewProvider {
   static var previews: some View {
-    CharacterCardView(
-      name: "Rick Sanchez",
+    CharacterCard(result: CharacterResult(
+      id: "",
       image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      gender: "Male",
-      status: "Alive",
-      origin: CharacterOrigin(id: "123", name: Name(rawValue: "Earth") ?? .unknown)
+      name: "Rick Sanchez",
+      gender: .male,
+      status: .alive,
+      origin: CharacterOrigin(
+        id: "",
+        name: .earthC137,
+        dimension: .dimensionC137
+      )
+    )
     )
   }
 }

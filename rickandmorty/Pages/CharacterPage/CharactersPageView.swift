@@ -1,5 +1,5 @@
 //
-//  CharactersView.swift
+//  CharactersPageView.swift
 //  rickandmorty
 //
 //  Created by Cem Ozturk on 18.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharactersView: View {
+struct CharactersPageView: View {
 
   @ObservedObject var vm: CharacterVM
   @State private var searchText = ""
@@ -17,28 +17,16 @@ struct CharactersView: View {
       List{
         ForEach(vm.characterResults){ result in
           ZStack{
-            CharacterCardView(
-              name: result.name,
-              image: result.image,
-              gender: result.gender.rawValue,
-              status: result.status.rawValue,
-              origin: result.origin
-            )
+            CharacterCard(result: result)
             NavigationLink(destination:
-                            CharacterDetailPage(
-              image: result.image,
-              name: result.name,
-              gender: result.gender.rawValue,
-              status: result.status.rawValue,
-              originName: result.origin.name.rawValue ?? "",
-              originDimension: result.origin.dimension?.rawValue ?? ""
-            )) {
+                            CharacterDetailPage(result: result)
+            )
+            {
               EmptyView()
             }
             .opacity(0.0)
             .buttonStyle(PlainButtonStyle())
           }
-          //.searchable(text: characterData.name))
         }
         .listRowSeparator(.hidden)
         .listRowBackground(Color("bgColor"))
@@ -49,12 +37,12 @@ struct CharactersView: View {
         vm.refreshCharacterData()
       }
       .onAppear{
-        //FIXME: Only Hides
         UITableView.appearance().showsVerticalScrollIndicator = false
       }
       .searchable(text: $searchText, prompt: "Look for character")
       .onChange(of: searchText) { searchText in
         print("Text değişti")
+        //TODO: This feature will be added in the future
       }
       .navigationTitle("Characters")
     }
@@ -64,6 +52,6 @@ struct CharactersView: View {
 
 struct CharactersView_Previews: PreviewProvider {
   static var previews: some View {
-    CharactersView(vm: CharacterVM())
+    CharactersPageView(vm: CharacterVM())
   }
 }

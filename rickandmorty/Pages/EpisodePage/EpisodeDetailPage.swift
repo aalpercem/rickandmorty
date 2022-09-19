@@ -9,13 +9,15 @@ import SwiftUI
 
 struct EpisodeDetailPage: View {
 
-  var id: String
-  var name: String
-  var episodeCode: String
-  var airDate: String
-  var characters: [EpisodeCharacter]
+  var result:  EpisodeResult
 
   var body: some View {
+
+    let name = result.name.rawValue
+    let episodeCode = result.episode.rawValue
+    let airDate = result.airDate
+    let characters = result.characters
+
     VStack{
       VStack{
         Image("RMEpisode")
@@ -44,17 +46,26 @@ struct EpisodeDetailPage: View {
 
       }
     }
-    .background(LinearGradient(gradient: Gradient(colors: [Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))
+    .background(
+      LinearGradient(
+        gradient: Gradient(colors: [Color("bgColor"), .white]),
+        startPoint: .top,
+        endPoint: .bottom
+      )
+    )
   }
 }
 
 struct EpisodeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EpisodeDetailPage(
-          id: "1",
-          name: "Pilot",
-          episodeCode: "S01E01",
-          airDate: "1 January, 2022",
-          characters: [])
+      EpisodeDetailPage(
+        result: EpisodeResult(
+          id: "",
+          name: .pilot,
+          episode: .s01E01,
+          airDate: "January 1, 2022",
+          characters: []
+        )
+      )
     }
 }

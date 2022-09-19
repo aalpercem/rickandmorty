@@ -30,9 +30,12 @@ class CharacterVM: ObservableObject {
       case let .success(response):
         print("Success! Result:\(response)")
         if let characters = response.data?.characters{
+
           self.totalPage = characters.info?.pages
+
           characters.results?.forEach { item in
             if let item = item {
+
               let characterResult = CharacterResult(
                 id: item.id ?? "",
                 image: item.image ?? "",
@@ -57,7 +60,15 @@ class CharacterVM: ObservableObject {
     }
   }
 
-  //MARK: For scrolling
+  func refreshCharacterData() {
+    guard isPulled && currentPage - 1 != totalPage else {
+      return
+    }
+    fetchCharacters(page: currentPage)
+    self.isPulled = false
+  }
+
+  //MARK: Infinite scrolling - May be added in the future
   func reloadMoreData (resultIndex: Int) {
     if resultIndex == characterResults.count - 2{
       guard currentPage - 1 != totalPage else {
@@ -65,14 +76,6 @@ class CharacterVM: ObservableObject {
       }
       fetchCharacters(page: currentPage)
     }
-  }
-
-  func refreshCharacterData() {
-    guard isPulled && currentPage - 1 != totalPage else {
-      return
-    }
-    fetchCharacters(page: currentPage)
-    self.isPulled = false
   }
 }
 

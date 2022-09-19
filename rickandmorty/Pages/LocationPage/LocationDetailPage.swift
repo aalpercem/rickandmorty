@@ -9,12 +9,14 @@ import SwiftUI
 
 struct LocationDetailPage: View {
 
-  var name: String
-  var dimension: String
-  var residents: [LocationsResident]
-
+  var result: LocationsResult
 
   var body: some View {
+
+    let name = result.name
+    let dimension = result.dimension
+    let residents = result.residents
+
       VStack{
         VStack{
           Image("RMEarth")
@@ -38,20 +40,26 @@ struct LocationDetailPage: View {
           ResidentCircle(residents: residents)
         }
       }
-      .background(LinearGradient(gradient: Gradient(colors: [Color("bgColor"), .white]), startPoint: .top, endPoint: .bottom))
-//      .navigationTitle(name)
-
+      .background(
+        LinearGradient(
+          gradient: Gradient(colors: [Color("bgColor"), .white]),
+          startPoint: .top,
+          endPoint: .bottom
+        )
+      )
   }
 }
 
 #if DEBUG
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationDetailPage(
-          name: "LocationName",
-          dimension: "LocationDimension",
-          residents: []
-        )
+      LocationDetailPage(result: LocationsResult(
+        id: "",
+        name: "Rick Sanchez",
+        dimension: "C-137",
+        residents: []
+      )
+      )
     }
 }
 #endif

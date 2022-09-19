@@ -32,6 +32,7 @@ struct EpisodeCard: View {
       VStack (alignment: .leading, spacing: 5) {
         Text(name)
           .font(.title)
+          .lineLimit(2)
         Spacer()
         Text(episodeCode)
         HStack {
@@ -43,7 +44,7 @@ struct EpisodeCard: View {
       .padding()
     }
     .frame(width: screenWidth * 0.9)
-    .frame(maxHeight: .infinity)
+    .frame(maxHeight: screenHeight * 0.4)
     .background(Color("cardColor"))
     .cornerRadius(15)
     .shadow(color: Color("bgColor"), radius: 5, x: 8, y: 8)
@@ -52,7 +53,6 @@ struct EpisodeCard: View {
   }
 }
 
-#if DEBUG
 struct EpisodeCard_Previews: PreviewProvider {
   static var previews: some View {
     EpisodeCard(
@@ -66,4 +66,3 @@ struct EpisodeCard_Previews: PreviewProvider {
     )
   }
 }
-#endif

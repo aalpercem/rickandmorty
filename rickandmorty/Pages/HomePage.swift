@@ -46,10 +46,8 @@ struct HomePage: View {
   }
 }
 
-#if DEBUG
 struct Home_Previews: PreviewProvider {
   static var previews: some View {
     HomePage().environmentObject(LaunchScreenManager())
   }
 }
-#endif

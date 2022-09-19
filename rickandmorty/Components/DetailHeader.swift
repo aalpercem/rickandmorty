@@ -32,7 +32,6 @@ struct DetailHeaderView: View {
     }
 }
 
-#if DEBUG
 struct DetailHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         DetailHeaderView(
@@ -41,4 +40,3 @@ struct DetailHeaderView_Previews: PreviewProvider {
         )
     }
 }
-#endif

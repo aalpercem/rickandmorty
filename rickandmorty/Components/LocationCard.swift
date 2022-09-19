@@ -32,7 +32,9 @@ struct LocationCard: View {
           .scaledToFill()
 
         VStack(alignment: .leading){
-          Text(name).font(.title)
+          Text(name)
+            .font(.title)
+            .lineLimit(2)
           Spacer(minLength: 5)
 
           HStack{
@@ -44,7 +46,7 @@ struct LocationCard: View {
         .padding()
       }
       .frame(width: screenWidth * 0.8, alignment: .center)
-      .frame(maxHeight: .infinity)
+      .frame(maxHeight: screenHeight * 0.4 )
       .background(Color("cardColor"))
       .cornerRadius(15)
       .shadow(color: Color("bgColor"), radius: 5, x: 8, y: 8)
@@ -53,7 +55,6 @@ struct LocationCard: View {
   }
 }
 
-#if DEBUG
 struct LocationCard_Previews: PreviewProvider {
   static var previews: some View {
     LocationCard(result: LocationsResult(
@@ -65,5 +66,3 @@ struct LocationCard_Previews: PreviewProvider {
     )
   }
 }
-#endif
-

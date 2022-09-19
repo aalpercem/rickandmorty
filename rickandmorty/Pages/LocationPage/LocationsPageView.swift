@@ -42,10 +42,8 @@ struct LocationsPageView: View {
   }
 }
 
-#if DEBUG
 struct LocationsView_Previews: PreviewProvider {
   static var previews: some View {
     LocationsPageView(vm: LocationVM())
   }
 }
-#endif

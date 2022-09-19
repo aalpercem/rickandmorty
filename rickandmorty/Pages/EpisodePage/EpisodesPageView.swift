@@ -70,11 +70,8 @@ struct EpisodesPageView: View {
 //  }
 //}
 
-
-#if DEBUG
 struct EpisodesView_Previews: PreviewProvider {
   static var previews: some View {
     EpisodesPageView(vm: EpisodeVM())
   }
 }
-#endif

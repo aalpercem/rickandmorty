@@ -45,7 +45,6 @@ struct CharacterDetailPage: View {
   }
 }
 
-#if DEBUG
 struct CharacterDetailView_Previews: PreviewProvider {
   static var previews: some View {
     CharacterDetailPage(result: CharacterResult(
@@ -63,4 +62,3 @@ struct CharacterDetailView_Previews: PreviewProvider {
     )
   }
 }
-#endif

@@ -50,7 +50,6 @@ struct LocationDetailPage: View {
   }
 }
 
-#if DEBUG
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
       LocationDetailPage(result: LocationsResult(
@@ -62,4 +61,3 @@ struct LocationDetailView_Previews: PreviewProvider {
       )
     }
 }
-#endif

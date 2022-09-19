@@ -18,8 +18,9 @@ struct CharactersPageView: View {
         ForEach(vm.characterResults){ result in
           ZStack{
             CharacterCard(result: result)
-            NavigationLink(destination:
-                            CharacterDetailPage(result: result)
+            NavigationLink(
+              destination:
+                CharacterDetailPage(result: result)
             )
             {
               EmptyView()

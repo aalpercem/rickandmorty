@@ -4,15 +4,10 @@
 <dict>
 	<key>UILaunchScreen</key>
 	<dict>
-		<key>UIColorName</key>
-		<string>bgColor</string>
-		<key>UIImageName</key>
-		<string>AppIcon</string>
 		<key>UILaunchScreen</key>
 		<dict>
 			<key>Splash Animation</key>
-			<data>
-			</data>
+			<data></data>
 		</dict>
 	</dict>
 </dict>

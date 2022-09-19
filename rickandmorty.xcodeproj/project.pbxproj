@@ -17,7 +17,6 @@
 		9F32E1FC28C1EF9600C123C4 /* EpisodeDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32E1FB28C1EF9600C123C4 /* EpisodeDetailPage.swift */; };
 		9F32E1FE28C1F0CE00C123C4 /* CharacterCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32E1FD28C1F0CE00C123C4 /* CharacterCircle.swift */; };
 		9F5F084A28CA1E5E006578C2 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F084928CA1E5E006578C2 /* LaunchScreen.swift */; };
-		9F5F084C28CA8372006578C2 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5F084B28CA8372006578C2 /* LaunchScreenManager.swift */; };
 		9F5F085028CA8697006578C2 /* rocket-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F5F084F28CA8697006578C2 /* rocket-loader.json */; };
 		9F652747288812DC00051B5B /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F652746288812DB00051B5B /* CharacterCard.swift */; };
 		9F82369028BFAF3600FBEF07 /* ResidentCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82368F28BFAF3600FBEF07 /* ResidentCircle.swift */; };
@@ -59,7 +58,6 @@
 		9F32E1FB28C1EF9600C123C4 /* EpisodeDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailPage.swift; sourceTree = "<group>"; };
 		9F32E1FD28C1F0CE00C123C4 /* CharacterCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCircle.swift; sourceTree = "<group>"; };
 		9F5F084928CA1E5E006578C2 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
-		9F5F084B28CA8372006578C2 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
 		9F5F084F28CA8697006578C2 /* rocket-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rocket-loader.json"; sourceTree = "<group>"; };
 		9F652746288812DB00051B5B /* CharacterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
 		9F82368F28BFAF3600FBEF07 /* ResidentCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidentCircle.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				9F5F084928CA1E5E006578C2 /* LaunchScreen.swift */,
-				9F5F084B28CA8372006578C2 /* LaunchScreenManager.swift */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -342,7 +339,6 @@
 			files = (
 				9FD0AE5728ACDE3000F3958C /* CharacterDetailPage.swift in Sources */,
 				9F32E1FE28C1F0CE00C123C4 /* CharacterCircle.swift in Sources */,
-				9F5F084C28CA8372006578C2 /* LaunchScreenManager.swift in Sources */,
 				9FFBE7972885555500BD19A9 /* CharactersPageView.swift in Sources */,
 				9FA8A25828C09FEE00E21B39 /* EpisodeVM.swift in Sources */,
 				9F32E1F828C1E86C00C123C4 /* EpisodesPageView.swift in Sources */,

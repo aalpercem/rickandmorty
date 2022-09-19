@@ -9,21 +9,31 @@ import SwiftUI
 
 struct LaunchScreen: View {
 
-  @EnvironmentObject var launchScreenManager: LaunchScreenManager
+  @State private var isActive = false
 
   var body: some View {
-    VStack(alignment: .center, spacing: 0){
-      LottieView(
-        fileName: "rocket-loader",
-        loopMode: .loop
-      )
+
+    if isActive {
+      HomePage()
+    } else {
+      VStack(alignment: .center, spacing: 0){
+        LottieView(
+          fileName: "rocket-loader",
+          loopMode: .loop
+        )
+      }
+      .background(Color("bgColor"))
+      .onAppear{
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0){
+          self.isActive = true
+        }
+      }
     }
-    .background(Color("bgColor"))
   }
 }
 
 struct LaunchScreen_Previews: PreviewProvider {
   static var previews: some View {
-    LaunchScreen().environmentObject(LaunchScreenManager())
+    LaunchScreen()
   }
 }

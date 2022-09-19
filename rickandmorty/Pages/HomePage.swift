@@ -10,8 +10,6 @@ import SwiftUI
 
 struct HomePage: View {
 
-  @EnvironmentObject var launchScreenManager: LaunchScreenManager
-
   var body: some View {
     TabView {
       CharactersPageView(vm: CharacterVM())
@@ -35,19 +33,11 @@ struct HomePage: View {
         }
         .tag("EpisodesTab")
     }
-//    .onAppear{
-//      DispatchQueue.main.asyncAfter(deadline: .now() + 5){
-//        launchScreenManager.dismiss()
-//      }
-//      UITabBar.appearance().barTintColor = .white
-//      UITabBar.appearance().backgroundColor = UIColor(named: "cardColor")
-//    }
-//    .tint(Color("red"))
   }
 }
 
 struct Home_Previews: PreviewProvider {
   static var previews: some View {
-    HomePage().environmentObject(LaunchScreenManager())
+    HomePage()
   }
 }

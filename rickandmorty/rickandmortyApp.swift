@@ -16,13 +16,14 @@ struct rickandmortyApp: App {
 
     var body: some Scene {
         WindowGroup {
-          ZStack{
-            HomePage()
+//          ZStack{
+            LaunchScreen()
+//            HomePage()
             // counter
 //            if launchScreenManager.state != .completed {
 //              LaunchScreen()
 //            }
-          }//.environmentObject(launchScreenManager)
+//          }.environmentObject(launchScreenManager)
         }
     }
 }

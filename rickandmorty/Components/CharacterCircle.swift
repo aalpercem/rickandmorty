@@ -29,6 +29,7 @@ struct CharacterCircle: View {
                   .scaledToFill()
                   HStack {
                     Text(character.name)
+                      .lineLimit(1)
                     StatusCircle(status: character.status.rawValue)
                   }
                 }

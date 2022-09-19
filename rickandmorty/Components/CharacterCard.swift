@@ -53,7 +53,7 @@ struct CharacterCard: View {
     .frame(maxHeight: .infinity)
     .background(Color("cardColor"))
     .cornerRadius(15)
-    .shadow(color: .gray,
+    .shadow(color: Color("bgColor"),
             radius: 5,
             x: shadowHorizontalOffset,
             y: shadowVerticalOffset

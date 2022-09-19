@@ -51,7 +51,8 @@ class CharacterVM: ObservableObject {
               self.characterResults.append(characterResult)
             }
           }
-          self.currentPage += 1 // Event new page requested
+          //TODO: Trigger event for change currentPage (Event new page requested)
+          self.currentPage += 1
 
         }
       case .failure(let error):

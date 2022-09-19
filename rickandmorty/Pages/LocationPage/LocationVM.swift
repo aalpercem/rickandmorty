@@ -55,6 +55,7 @@ class LocationVM: ObservableObject {
                 self.locationResults.append(locationResult)
               }
             }
+          //TODO: Trigger event for change currentPage (Event new page requested)
             self.currentPage += 1
 
         }

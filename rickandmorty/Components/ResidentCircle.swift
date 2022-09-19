@@ -12,7 +12,7 @@ struct ResidentCircle: View {
   var residents: [LocationsResident]
 
     var body: some View {
-//      NavigationView {
+
         ScrollView(.horizontal, showsIndicators: false){
           HStack(spacing: 5) {
             ForEach(residents, id: \.privateId) { resident in
@@ -28,8 +28,10 @@ struct ResidentCircle: View {
                   .clipShape(Circle())
                   .clipped()
                   .scaledToFill()
+
                   HStack {
                     Text(resident.name)
+                      .lineLimit(1)
                     StatusCircle(status: resident.status.rawValue)
                   }
                 }

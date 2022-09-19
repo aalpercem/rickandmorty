@@ -26,7 +26,8 @@ struct DetailHeaderView: View {
         .clipped()
         .scaledToFill()
 
-        Text(name).font(.largeTitle)
+        Text(name)
+          .font(.largeTitle)
       }
     }
 }

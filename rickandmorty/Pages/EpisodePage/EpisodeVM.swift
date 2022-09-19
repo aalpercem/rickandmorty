@@ -58,6 +58,7 @@ class EpisodeVM: ObservableObject {
               self.episodeResults.append(episodeResult)
             }
           }
+          //TODO: Trigger event for change currentPage (Event new page requested)
           self.currentPage += 1
 
         }

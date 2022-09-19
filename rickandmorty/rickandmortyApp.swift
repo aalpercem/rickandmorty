@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct rickandmortyApp: App {
 
-  @StateObject var launchScreenManager = LaunchScreenManager()
-//  @StateObject var homeVm = HomeVM()
+  //MARK: This structure was for Lottie Splash Screen - May be added in the future
+
+//  @StateObject var launchScreenManager = LaunchScreenManager()
 
     var body: some Scene {
         WindowGroup {

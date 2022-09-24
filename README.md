@@ -9,8 +9,23 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 
 ## Table of Contents
 
-- [Editables](#Editables)  
-- [Emphasis](#emphasis)  
+- [Editables](#editables)  
+  - [Known bugs to be fixed in the future](#known-bugs-to-be-fixed-in-the-future)
+  - [Features to be added in the future](#features-to-be-added-in-the-future)
+  - [Nice to have](#nice-to-have)
+- [Demo](#demo)
+  - [Characters Page](#characters-page)
+  - [Locations Page](#locations-page)
+  - [Episodes Page](#episodes-page)
+  - [Character Detail Page](#character-detail-page)
+  - [Location Detail Page](#location-detail-page)
+  - [Episode Detail Page](#episode-detail-page)
+- [Acknowledgements](#acknowledgements)
+  - [Rick And Morty API](#rick-and-morty-api)
+  - [Apollo iOS](#apollo-ios)
+  - [Lottie Animation](#lottie-animation)
+- [Contact me via](#contact-me-via)
+- [See ya!](#see-ya)
 
 ## Editables
 ### Known bugs to be fixed in the future
@@ -38,39 +53,39 @@ Instead, the new page should be listed after the currentPage has increased by on
 
 ## Demo
 
-Here is some screenshots of the app.
+Here is some screenshots of the app from both light and dark appearance.
 
-- *Light & Dark Apperance* - __Characters Page__
+### __Characters Page__
 
 <img width="327" alt="image" src="https://user-images.githubusercontent.com/56734989/192114982-d66993e7-8c49-4ed7-bf32-c05fbe362690.png"> <img width="327" alt="image" src="https://user-images.githubusercontent.com/56734989/192114965-0938439f-4cb1-4ab4-bb4b-af424ce3c39e.png">
 
-- *Light & Dark Apperance* - __Locations Page__
+### __Locations Page__
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115114-e8e8322f-15ef-4b49-9977-73dce36c59f7.png"> <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115122-478e1aa9-f2d6-407a-aa03-f5f3489979bc.png">
 
 
-- *Light & Dark Apperance* - __Episodes Page__
+### __Episodes Page__
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115126-4dff3ecd-c0a7-416c-b8fe-aadca483a651.png"> <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115130-c7015807-be73-4b4d-b9b2-185ec8e2d57c.png">
 
-- *Light & Dark Apperance* - __Character Detail Page__
+### __Character Detail Page__
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115467-4c1adde9-f600-4fdf-97d5-b34f56c64666.png"> <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115513-787c449b-5026-44fe-bd87-76ac962d76a1.png">
 
 
-- *Light & Dark Apperance* - __Location Detail Page__
+### __Location Detail Page__
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115544-5d0e84eb-bb8a-498f-83dc-ef3bba97b644.png"> <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115249-0b8f03e9-bc3c-4c50-9e2d-97d44cff2a1c.png">
 
 
-- *Light & Dark Apperance* - __Episode Detail Page__
+### __Episode Detail Page__
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115362-6df24528-8471-4bda-a724-93224bf0d925.png"> <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115375-d7c5466a-15fa-4d5f-bbba-2ef0617873da.png">
 
 ## Acknowledgements
-- [Rick And Morty API](https://rickandmortyapi.com)
-- [Apollo iOS](https://www.apollographql.com)
-- [Lottie Animation](https://lottiefiles.com)
+- #### [Rick And Morty API](https://rickandmortyapi.com)
+- #### [Apollo iOS](https://www.apollographql.com)
+- #### [Lottie Animation](https://lottiefiles.com)
 
 ## Contact me via
 

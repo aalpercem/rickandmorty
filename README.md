@@ -9,9 +9,8 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 
 ## Table of Contents
 
-- asdasd
-- asdasd
-  - askdamösd
+- [Editables](#Editables)  
+- [Emphasis](#emphasis)  
 
 ## Editables
 ### Known bugs to be fixed in the future
@@ -73,15 +72,12 @@ Here is some screenshots of the app.
 - [Apollo iOS](https://www.apollographql.com)
 - [Lottie Animation](https://lottiefiles.com)
 
-## Contact me
-- ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
-(https://www.linkedin.com/in/alper-cem-ozturk-a625671a8)
+## Contact me via
 
-- [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@aalpercem)
-[](https://medium.com/@aalpercem)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8)
+[](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8) [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@aalpercem)
+[](https://medium.com/@aalpercem) [![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)](mailto:cemozturk0@icloud.com)
+[](mailto:cemozturk0@icloud.com)
 
-- ![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)
-[via](cemozturk0@icloud.com)
-
+## See ya!
 ![rmflying](https://user-images.githubusercontent.com/56734989/192115977-68d874aa-d344-4898-98fc-afd0c7c2da40.gif)
-

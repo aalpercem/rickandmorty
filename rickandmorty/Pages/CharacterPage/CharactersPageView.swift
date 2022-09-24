@@ -15,7 +15,8 @@ struct CharactersPageView: View {
   var body: some View {
     NavigationView {
       List{
-        ForEach(vm.characterResults){ result in
+        ForEach(vm.characterResults.indices, id:\.self){ resultIndex in
+          let result = vm.characterResults[resultIndex]
           ZStack{
             CharacterCard(result: result)
             NavigationLink(
@@ -28,15 +29,26 @@ struct CharactersPageView: View {
             .opacity(0.0)
             .buttonStyle(PlainButtonStyle())
           }
+          .onAppear{
+            vm.reloadMoreData(resultIndex: resultIndex)
+          }
         }
         .listRowSeparator(.hidden)
         .listRowBackground(Color("bgColor"))
+
+        if vm.shouldReload() {
+          self.LoadingView()
+            .frame(width: screenWidth,
+                   height: 100,
+                   alignment: .center
+            )
+            .background(Color("bgColor"))
+            .offset(x: -20, y: -6)
+            .listRowSeparator(.hidden)
+        }
+
       }
       .listStyle(PlainListStyle())
-      .refreshable {
-        vm.isPulled = true
-        vm.refreshCharacterData()
-      }
       .onAppear{
         UITableView.appearance().showsVerticalScrollIndicator = false
       }
@@ -45,11 +57,22 @@ struct CharactersPageView: View {
         print("Text değişti")
         //TODO: This feature will be added in the future
       }
+
+
       .navigationTitle("Characters")
     }
   }
-}
 
+  func LoadingView() -> some View {
+    return VStack(spacing: 15) {
+      ProgressView()
+        .progressViewStyle(
+          CircularProgressViewStyle(tint: .gray))
+        .scaleEffect(2)
+      Text("Loading...")
+    }
+  }
+}
 
 struct CharactersView_Previews: PreviewProvider {
   static var previews: some View {

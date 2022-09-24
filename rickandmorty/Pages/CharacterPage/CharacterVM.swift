@@ -61,15 +61,7 @@ class CharacterVM: ObservableObject {
     }
   }
 
-  func refreshCharacterData() {
-    guard isPulled && currentPage - 1 != totalPage else {
-      return
-    }
-    fetchCharacters(page: currentPage)
-    self.isPulled = false
-  }
-
-  //MARK: Infinite scrolling - May be added in the future
+  //MARK: Infinite scrolling
   func reloadMoreData (resultIndex: Int) {
     if resultIndex == characterResults.count - 2{
       guard currentPage - 1 != totalPage else {
@@ -77,6 +69,13 @@ class CharacterVM: ObservableObject {
       }
       fetchCharacters(page: currentPage)
     }
+  }
+
+  func shouldReload () -> Bool{
+    guard currentPage - 1 != totalPage else {
+      return false
+    }
+    return true
   }
 }
 

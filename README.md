@@ -9,7 +9,7 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 
 ## Table of Contents
 
-- [Editables](#editables)  
+- [Editable Parts](#editable-parts)  
   - [Known bugs to be fixed in the future](#known-bugs-to-be-fixed-in-the-future)
   - [Features to be added in the future](#features-to-be-added-in-the-future)
   - [Nice to have](#nice-to-have)
@@ -27,7 +27,7 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 - [Contact me via](#contact-me-via)
 - [See ya!](#see-ya)
 
-## Editables
+## Editable Parts
 ### Known bugs to be fixed in the future
 
 - One of the components on the cards must be clicked to go to the detail page. (Image, text etc.) Clicking on the card itself should be enough.
@@ -89,10 +89,11 @@ Here is some screenshots of the app from both light and dark appearance.
 
 ## Contact me via
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8)
-[](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8) [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@aalpercem)
-[](https://medium.com/@aalpercem) [![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)](mailto:cemozturk0@icloud.com)
-[](mailto:cemozturk0@icloud.com)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8) [](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8)
+
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@aalpercem) [](https://medium.com/@aalpercem)
+
+[![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)](mailto:cemozturk0@icloud.com) [](mailto:cemozturk0@icloud.com)
 
 ## See ya!
 ![rmflying](https://user-images.githubusercontent.com/56734989/192115977-68d874aa-d344-4898-98fc-afd0c7c2da40.gif)

@@ -65,7 +65,7 @@ class LocationVM: ObservableObject {
 
   //MARK: Infinite scrolling
   func reloadMoreData (resultIndex: Int) {
-    if resultIndex == locationResults.count - 2{
+    if resultIndex == locationResults.count - 1{
       guard currentPage - 1 != totalPage else {
         return
       }

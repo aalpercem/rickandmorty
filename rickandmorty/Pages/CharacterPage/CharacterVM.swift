@@ -61,7 +61,7 @@ class CharacterVM: ObservableObject {
 
   //MARK: Infinite scrolling
   func reloadMoreData (resultIndex: Int) {
-    if resultIndex == characterResults.count - 2{
+    if resultIndex == characterResults.count - 1{
       guard currentPage - 1 != totalPage else {
         return
       }

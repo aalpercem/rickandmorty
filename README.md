@@ -1,12 +1,11 @@
 # Rick And Morty iOS App 
 
-iOS App using the Rick And Morty API in SwiftUI. Developed for educational purposes.
+iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. Developed for educational purposes.
 
-[Rick And Morty API](https://rickandmortyapi.com) 
 
 ![rm](https://user-images.githubusercontent.com/56734989/192112936-29368eb6-b63d-43ac-b750-c0152bfc1683.gif)
 
--> Check out the videos in the issues to see how the app works!!
+> Check out the videos in the issues to see how the app works!!
 
 ## Table of Contents
 
@@ -69,10 +68,20 @@ Here is some screenshots of the app.
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115362-6df24528-8471-4bda-a724-93224bf0d925.png"> <img width="325" alt="image" src="https://user-images.githubusercontent.com/56734989/192115375-d7c5466a-15fa-4d5f-bbba-2ef0617873da.png">
 
-
-
-
 ## Acknowledgements
 - [Rick And Morty API](https://rickandmortyapi.com)
 - [Apollo iOS](https://www.apollographql.com)
 - [Lottie Animation](https://lottiefiles.com)
+
+## Contact me
+- ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
+[](https://www.linkedin.com/in/alper-cem-ozturk-a625671a8)
+
+- [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@aalpercem)
+[](https://medium.com/@aalpercem)
+
+- ![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)
+[via](cemozturk0@icloud.com)
+
+![rmflying](https://user-images.githubusercontent.com/56734989/192115977-68d874aa-d344-4898-98fc-afd0c7c2da40.gif)
+

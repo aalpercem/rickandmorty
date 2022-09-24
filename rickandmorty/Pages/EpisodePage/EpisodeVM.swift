@@ -10,10 +10,8 @@ import SwiftUI
 class EpisodeVM: ObservableObject {
 
   @Published var episodeResults: [EpisodeResult] = []
-  @Published var isPulled: Bool = false
   @Published var currentPage: Int = 1
 
-  let emptyResult: [EpisodeResult] = []
   var totalPage: Int? = nil
 
   init(){
@@ -68,12 +66,20 @@ class EpisodeVM: ObservableObject {
     }
   }
 
-  func refreshEpisodeData() {
-    guard isPulled && currentPage - 1 != totalPage else {
-      return
+  //MARK: Infinite scrolling
+  func reloadMoreData (resultIndex: Int) {
+    if resultIndex == episodeResults.count - 1{
+      guard currentPage - 1 != totalPage else {
+        return
+      }
+      fetchEpisodes(page: currentPage)
     }
-    fetchEpisodes(page: currentPage)
-    self.isPulled = false
   }
-  
+
+  func shouldReload () -> Bool{
+    guard currentPage - 1 != totalPage else {
+      return false
+    }
+    return true
+  }
 }

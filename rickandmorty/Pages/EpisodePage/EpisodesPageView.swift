@@ -14,7 +14,8 @@ struct EpisodesPageView: View {
   var body: some View {
     NavigationView {
       List{
-        ForEach(vm.episodeResults) { result in
+        ForEach(vm.episodeResults.indices, id:\.self) { resultIndex in
+          let result = vm.episodeResults[resultIndex]
           ZStack{
             EpisodeCard(result: result)
             NavigationLink(
@@ -27,48 +28,43 @@ struct EpisodesPageView: View {
             .buttonStyle(PlainButtonStyle())
           }
           .listRowInsets(EdgeInsets())
+          .onAppear{
+            vm.reloadMoreData(resultIndex: resultIndex)
+          }
         }
         .listRowSeparator(.hidden)
         .listRowBackground(Color("bgColor"))
+
+        if vm.shouldReload() {
+          self.LoadingView()
+            .frame(width: screenWidth,
+                   height: 100,
+                   alignment: .center
+            )
+            .background(Color("bgColor"))
+            .offset(x: -20, y: -6)
+            .listRowSeparator(.hidden)
+        }
       }
       .listStyle(PlainListStyle())
-      .refreshable {
-        vm.isPulled = true
-        vm.refreshEpisodeData()
-      }
       .onAppear{
         UITableView.appearance().showsVerticalScrollIndicator = false
       }
       .navigationTitle("Episodes")
     }
   }
+
+  func LoadingView() -> some View {
+    return VStack(spacing: 15) {
+      ProgressView()
+        .progressViewStyle(
+          CircularProgressViewStyle(tint: .gray))
+        .scaleEffect(2)
+      Text("Loading...")
+    }
+  }
 }
 
-
-//
-//MARK: May be added in the future
-//public struct RefreshableScrollView<Content: View>: View {
-//  var content: Content
-//  var onRefresh: () async -> ()
-//
-//  init(
-//    content: @escaping () -> Content,
-//    onRefresh: @escaping () async -> ()
-//  ) {
-//    self.content = content()
-//    self.onRefresh = onRefresh
-//  }
-//
-//  public var body: some View {
-//    List {
-//      content
-//    }
-//    .listStyle(.plain)
-//    .refreshable {
-//      await onRefresh()
-//    }
-//  }
-//}
 
 struct EpisodesView_Previews: PreviewProvider {
   static var previews: some View {

@@ -43,10 +43,9 @@ struct CharactersPageView: View {
                    alignment: .center
             )
             .background(Color("bgColor"))
-            .offset(x: -20, y: -6)
+            .listRowInsets(EdgeInsets())
             .listRowSeparator(.hidden)
         }
-
       }
       .listStyle(PlainListStyle())
       .onAppear{
@@ -57,8 +56,6 @@ struct CharactersPageView: View {
         print("Text değişti")
         //TODO: This feature will be added in the future
       }
-
-
       .navigationTitle("Characters")
     }
   }

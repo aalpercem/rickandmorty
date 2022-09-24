@@ -11,10 +11,8 @@ class CharacterVM: ObservableObject {
 
   //  @Published var searchQuery = ""
   @Published var characterResults: [CharacterResult] = []
-  @Published var isPulled: Bool = false
   @Published var currentPage: Int = 1
 
-  let emptyResult: [CharacterResult] = []
   var totalPage: Int? = nil
 
   init(){

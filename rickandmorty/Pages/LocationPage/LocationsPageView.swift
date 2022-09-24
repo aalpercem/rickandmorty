@@ -14,7 +14,8 @@ struct LocationsPageView: View {
   var body: some View {
     NavigationView {
       List {
-        ForEach(vm.locationResults){ result in
+        ForEach(vm.locationResults.indices, id:\.self){ resultIndex in
+          let result = vm.locationResults[resultIndex]
           ZStack{
             LocationCard(result: result)
             NavigationLink(destination: LocationDetailPage(result: result))
@@ -24,20 +25,39 @@ struct LocationsPageView: View {
             .opacity(0.0)
             .buttonStyle(PlainButtonStyle())
           }
+          .onAppear{
+            vm.reloadMoreData(resultIndex: resultIndex)
+          }
         }
         .listRowSeparator(.hidden)
         .listRowBackground(Color("bgColor"))
+
+        if vm.shouldReload() {
+          self.LoadingView()
+            .frame(width: screenWidth,
+                   height: 100,
+                   alignment: .center
+            )
+            .background(Color("bgColor"))
+            .listRowInsets(EdgeInsets())
+            .listRowSeparator(.hidden)
+        }
       }
       .listStyle(PlainListStyle())
-      .refreshable {
-        vm.isPulled = true
-        vm.refreshLocationData()
-
-      }
       .onAppear{
         UITableView.appearance().showsVerticalScrollIndicator = false
       }
       .navigationTitle("Locations")
+    }
+  }
+  
+  func LoadingView() -> some View {
+    return VStack(spacing: 15) {
+      ProgressView()
+        .progressViewStyle(
+          CircularProgressViewStyle(tint: .gray))
+        .scaleEffect(2)
+      Text("Loading...")
     }
   }
 }

@@ -10,10 +10,8 @@ import SwiftUI
 class LocationVM: ObservableObject {
 
   @Published var locationResults: [LocationsResult] = []
-  @Published var isPulled: Bool = false
   @Published var currentPage: Int = 1
 
-  let emptyResult: [LocationsResult] = []
   var totalPage: Int? = nil
 
   init(){
@@ -65,14 +63,20 @@ class LocationVM: ObservableObject {
     }
   }
 
-  func refreshLocationData() {
-    guard isPulled && currentPage - 1 != totalPage else {
-      return
+  //MARK: Infinite scrolling
+  func reloadMoreData (resultIndex: Int) {
+    if resultIndex == locationResults.count - 2{
+      guard currentPage - 1 != totalPage else {
+        return
+      }
+      fetchLocations(page: currentPage)
     }
-    fetchLocations(page: currentPage)
-    self.isPulled = false
   }
 
+  func shouldReload () -> Bool{
+    guard currentPage - 1 != totalPage else {
+      return false
+    }
+    return true
+  }
 }
-
-

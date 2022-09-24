@@ -1,11 +1,8 @@
 # rickandmorty
-rick and morty app for educational purposes.
+Rick and morty app for educational purposes.
 
 
-
-
-
-
+Check out the videos in the issues to see how the app works.
 
 Known bugs to be fixed in the future
 

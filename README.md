@@ -1,8 +1,12 @@
-# rickandmorty
-Rick and morty app for educational purposes.
+# Rick And Morty iOS App
 
+iOS App using the Rick And Morty API in SwiftUI. Developed for educational purposes.
 
-Check out the videos in the issues to see how the app works.
+[Rick And Morty API](https://rickandmortyapi.com) 
+
+![rm](https://user-images.githubusercontent.com/56734989/192112936-29368eb6-b63d-43ac-b750-c0152bfc1683.gif)
+
+Check out the videos in the issues to see how the app works!!
 
 Known bugs to be fixed in the future
 
@@ -26,3 +30,11 @@ But after the currentPage is listed, its value increases by one.
 Here an increment function of currentPage needs to be calculated and triggered as a separate event.
 Also, currentPage should not increase by one after the new page is listed.
 Instead, the new page should be listed after the currentPage has increased by one.
+
+
+
+# Acknowledgements
+- [Rick And Morty API](https://rickandmortyapi.com)
+- [Apollo iOS](https://www.apollographql.com)
+- [Lottie Animation](https://lottiefiles.com)
+- 

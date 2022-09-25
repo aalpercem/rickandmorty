@@ -7,6 +7,11 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 
 > Check out the videos in the issues to see how the app works!!
 
+## This app
+- supports iOS 15.4+
+- developed by using MVVM architecture.
+- includes GraphQL Integration
+
 ## Table of Contents
 
 - [Editable Parts](#editable-parts)  

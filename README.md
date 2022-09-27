@@ -46,6 +46,7 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 clicking on any of the episode characters can go to the detail page of the relevant character.
 - Enable the search feature on the Characters page (currently it only appears in the UI. It does not search or filter in the background)
 - Add scrolling feature to the top of the page with sticky button action.
+- Shimmer effect for infinite scrolling
 
 ### Nice to have
 

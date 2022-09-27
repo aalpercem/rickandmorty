@@ -35,7 +35,7 @@ iOS App using the [Rick And Morty API](https://rickandmortyapi.com) in SwiftUI. 
 ## Editable Parts
 ### Known bugs to be fixed in the future
 
-- One of the components on the cards must be clicked to go to the detail page. (Image, text etc.) Clicking on the card itself should be enough.
+- One of the components on the cards must be tapped to go to the detail page. (Image, text etc.) Clicking on the card itself should be enough.
 - Since AsyncImage is a bit buggy, other alternatives can be used instead.
 - When using the phone horizontally, the display of the detail screen should be responsive.
 
